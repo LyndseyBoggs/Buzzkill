@@ -18,10 +18,10 @@ public class BeeMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.GetKeyDown (KeyCode.UpArrow) && transform.position.y < maxPosition) {
+		if ((Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && transform.position.y < maxPosition) {
 			Vector3.Lerp (transform.position, transform.position += new Vector3 (0, 3, 0), Time.deltaTime * playerSpeed);
 		}
-		if (Input.GetKeyDown (KeyCode.DownArrow) && transform.position.y > minPosition){
+		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && transform.position.y > minPosition){
 			transform.position += new Vector3 (0, -3, 0);
 		}
 	}

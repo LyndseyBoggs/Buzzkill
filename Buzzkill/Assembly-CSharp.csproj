@@ -55,7 +55,7 @@
      <Compile Include="Assets\Scripts\Death.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/adatuchb/Desktop/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/adatuchb/Documents/Buzzkill/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity201730f3/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
