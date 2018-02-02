@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buzzkill", "Assembly-CSharp.csproj", "{43A20B77-8FEC-5D5E-7815-8F2658445FCE}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buzzkill", "Buzzkill.csproj", "{1BB33FE0-5952-B12E-37FB-4CA7BEEAFD4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{43A20B77-8FEC-5D5E-7815-8F2658445FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43A20B77-8FEC-5D5E-7815-8F2658445FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43A20B77-8FEC-5D5E-7815-8F2658445FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43A20B77-8FEC-5D5E-7815-8F2658445FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB33FE0-5952-B12E-37FB-4CA7BEEAFD4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB33FE0-5952-B12E-37FB-4CA7BEEAFD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB33FE0-5952-B12E-37FB-4CA7BEEAFD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB33FE0-5952-B12E-37FB-4CA7BEEAFD4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

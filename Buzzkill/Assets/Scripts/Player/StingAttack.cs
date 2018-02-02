@@ -8,10 +8,8 @@ public class StingAttack : PlayerAttack {
     [Tooltip("How far forward the attack will move.")]
     public float attackRange;
     bool forwardSting;//determines if the bee is moving forward
-    //bool recoil;//determines if the bee is moving back
-    //bool valuesSet;//false until values needed for movement are obtained
-    Vector2 originalPosition;//original position the bee was at.
-    Vector2 finalPosition;//the furthest the attack goes to
+    Vector3 originalPosition;//original position the bee was at.
+    Vector3 finalPosition;//the furthest the attack goes to
 
     #endregion
 
@@ -20,8 +18,6 @@ public class StingAttack : PlayerAttack {
     protected override void Start () {
         base.Start();
         forwardSting = false;
-        //recoil = false;
-        //valuesSet = false;//values do not start set
 
 	}
 	
@@ -37,8 +33,6 @@ public class StingAttack : PlayerAttack {
         {
             originalPosition = tf.position;//sets the origin-point before bee attacks.
             forwardSting = true;//forward sting resets as first action
-            //recoil = false;//recoil resets to false.
-            //valuesSet = false;
         }
 
 	}
@@ -46,31 +40,34 @@ public class StingAttack : PlayerAttack {
     //the attack function
     void Attack()
     {
-        finalPosition = (Vector2)(-tf.right * attackRange) + originalPosition;//set the direction for the attack to move
-        
-        /*
-        //if the value for the final position is not set
-        if (!valuesSet)
-        {
-            finalPosition = (Vector2)(-tf.right * attackRange) + originalPosition;//set the direction for the attack to move
+        finalPosition = (-tf.right * attackRange) + originalPosition;//set the direction for the attack to move
 
-            valuesSet = true;
-        }
-        */
 
         //if the forward sting is happening
         if (forwardSting)
         {
+            Vector3 direction = finalPosition - originalPosition;//set the direction to move
+            direction.Normalize();//make it equal to 1 unit
+            projectileTF.position += projectileSpeed * direction;//move projectile in that direction at determined speed
+            
+            //if projectile hits or passes the attack range
             if(projectileTF.position.x <= finalPosition.x)
             {
-                forwardSting = false;
+                forwardSting = false;//start recoil
             }
 
         }
         //if the forward sting finished, it is recoiling
         else
         {
-
+            Vector3 direction = originalPosition - finalPosition;//set the direction to move
+            direction.Normalize();//make it equal to 1 unit
+            projectileTF.position += projectileSpeed * direction;//move projectile in that direction at determined speed
+            //if the projectile returns to original (on screen) position.
+            if (projectileTF.position.x >= originalPosition.x)
+            {
+                attackActive = false;//attack completes
+            }
         }
     }
 
