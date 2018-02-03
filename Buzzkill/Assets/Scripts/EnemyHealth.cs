@@ -25,14 +25,16 @@ public class EnemyHealth : MonoBehaviour {
 		//sets health when enemy spawns
 		currentHealth = startingHealth;
 	}
+	void Start(){
 
+	}
 	void Update ()
 	{
 		//if the enemy should sink
 		if(isSinking)
 		{
 			// sink the enemy down
-			transform.Translate (-Vector3 * sinkSpeed * Time.deltaTime)
+			//transform.Translate (-Vector3 * sinkSpeed * Time.deltaTime);
 		}
 	}
 
@@ -44,7 +46,7 @@ public class EnemyHealth : MonoBehaviour {
 			//dont run damage
 			return;
 		}
-		currentHealth -= amount
+		currentHealth -= amount;
 
 		//if current health is less than or equal to zero
 		if (currentHealth <= 0)
@@ -69,7 +71,7 @@ public class EnemyHealth : MonoBehaviour {
 	public void StartSinking ()
 	{
 		//find and diable navmesh
-		GetComponent <NavMeshAgent> ().enabled = false;
+		//GetComponent <NavMeshAgent> ().enabled = false;
 
 		//find and make the rigidbody component and make it kinematic
 		GetComponent <Rigidbody> ().isKinematic = true;
@@ -78,15 +80,6 @@ public class EnemyHealth : MonoBehaviour {
 		isSinking = true;
 
 		//after 2 seconds destroy enemy
-		Destroy (gameObject, 2f)
-	}
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		Destroy (gameObject, 2f);
 	}
 }
