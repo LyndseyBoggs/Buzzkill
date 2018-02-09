@@ -21,7 +21,7 @@ public class BeeMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.instance.isPaused) {
+		if (GameManager.instance.isPaused || GameManager.instance.isGameOver) {
 			return;
 		}
 		if ((Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && position < maxPosition) {

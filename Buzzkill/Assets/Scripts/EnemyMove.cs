@@ -5,12 +5,16 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour {
 
 	Transform tf;
-	public float speed;
+	public	 float speed;
+	public float throwRange;
+	BeeMovement player;
+	public GameObject objToThrow;
+	private bool thrown;
 
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
-		speed = Random.Range (5, 10);
+		player = GameObject.FindObjectOfType<BeeMovement> ();
 	}
 	
 	// Update is called once per frame
@@ -19,13 +23,19 @@ public class EnemyMove : MonoBehaviour {
 			return;
 		}
 		tf.position += tf.right * Time.deltaTime * speed;
+		if (!thrown) {
+			if ((player.transform.position.x - tf.position.x) < throwRange) {
+				ThrowObj ();
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		BeeMovement player = other.GetComponent<BeeMovement> ();
-		if (player) {
-			player.Hit ();
-			Destroy (gameObject);
-		}
+		
+	}
+
+	void ThrowObj(){
+		Instantiate (objToThrow, transform.position, transform.rotation);
+		thrown = true;
 	}
 }

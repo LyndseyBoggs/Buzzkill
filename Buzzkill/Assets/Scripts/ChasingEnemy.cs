@@ -35,6 +35,7 @@ public class ChasingEnemy : MonoBehaviour {
 		} else if (currentState == States.killing) {
 			offset = new Vector3 (0, 0, 0);
 			StopAllCoroutines ();
+			GameManager.instance.GameOver ();
 		}
 		tf.position += vecToGoal * Time.deltaTime * speed;
 

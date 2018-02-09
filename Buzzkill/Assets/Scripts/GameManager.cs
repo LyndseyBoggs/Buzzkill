@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 	public bool isPaused;
 	public int score;
 	public Text scoreText;
+	public bool isGameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +34,13 @@ public class GameManager : MonoBehaviour {
 		if (isPaused) {
 			return;
 		}
-		score++;
-		scoreText.text = "Score: " + score;
+		if (!isGameOver) {
+			score++;
+			scoreText.text = "Score: " + score;
+		}
+	}
+
+	public void GameOver(){
+		isGameOver = true;
 	}
 }
