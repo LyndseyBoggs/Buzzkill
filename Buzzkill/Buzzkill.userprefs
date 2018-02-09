@@ -1,17 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\BeeMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RandomSpawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\MoveForward.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Death.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="24" Column="71" />
-      <File FileName="Assets\Scripts\RandomSpawner.cs" Line="32" Column="19" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="8" Column="9" />
-      <File FileName="Assets\Scripts\ChasingEnemy.cs" Line="38" Column="37" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="40" Column="4" />
-      <File FileName="Assets\Scripts\ThrownObject.cs" Line="23" Column="14" />
-      <File FileName="Assets\Scripts\EndOfScreen.cs" Line="10" Column="31" />
+      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="35" Column="104" />
+      <File FileName="Assets\Scripts\RandomSpawner.cs" Line="29" Column="68" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="25" Column="85" />
+      <File FileName="Assets\Scripts\ChasingEnemy.cs" Line="40" Column="86" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="20" Column="33" />
+      <File FileName="Assets\Scripts\ThrownObject.cs" Line="16" Column="85" />
+      <File FileName="Assets\Scripts\EndOfScreen.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

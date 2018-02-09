@@ -37,7 +37,7 @@ public class ChasingEnemy : MonoBehaviour {
 			StopAllCoroutines ();
 			GameManager.instance.GameOver ();
 		}
-		tf.position += vecToGoal * Time.deltaTime * speed;
+		tf.position += vecToGoal * Time.deltaTime * speed * GameManager.instance.worldSpeed;
 
 	}
 

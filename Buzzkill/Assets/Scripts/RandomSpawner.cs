@@ -23,11 +23,10 @@ public class RandomSpawner : MonoBehaviour {
 		}
 		int randoNum = Random.Range (0, spawnChance);
 		if (randoNum == 0) {
-			spawnChance = 500;
+			spawnChance = 500 / (int) GameManager.instance.worldSpeed;
 			randoNum = Random.Range (0, objsPossible.Length);
 			objToSpawn = objsPossible [randoNum].gameObject;
 			spawnedObj = Instantiate (objToSpawn, tf.position, tf.rotation);
-			//spawnedObj.AddComponent<EnemyMove>();
 		} else {
 			spawnChance--;	
 		}

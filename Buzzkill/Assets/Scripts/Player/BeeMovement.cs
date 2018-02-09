@@ -7,11 +7,14 @@ public class BeeMovement : MonoBehaviour {
 	public Transform tf;
 	public float distance;
 	public float playerSpeed = 5.0f;
-	private int position = 0;
-	private int maxPosition = 1;
-	private int minPosition = -1;
-	private bool isMoving;
+	public int position = 1;
+	private int maxPosition = 2;
+	private int minPosition = 0;
+	public bool isMoving;
 	ChasingEnemy enemyChasing;
+	public Transform[] positions;
+	public Transform goal;
+	public float proximity;
 
 	// Use this for initialization
 	void Start () {
@@ -24,41 +27,45 @@ public class BeeMovement : MonoBehaviour {
 		if (GameManager.instance.isPaused || GameManager.instance.isGameOver) {
 			return;
 		}
-		if ((Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && position < maxPosition) {
+		if ((Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && position > minPosition) {
 			if (!isMoving) {
 				StartCoroutine (MoveUp ());
-				position++;
 			}
 		}
-		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && position > minPosition){
+		if ((Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && position < maxPosition){
 			if (!isMoving) {
 				StartCoroutine (MoveDown ());
-				position--;
 			}
 		}
 	}
 
 	IEnumerator MoveUp(){
 		isMoving = true;
-			for (int i = 0; i < distance;) {
-				if (!GameManager.instance.isPaused) {
-					tf.position += tf.up * Time.deltaTime * playerSpeed;
-					i++;
-				}
-				yield return null;
+		goal = positions [position - 1];
+		Vector3 vecToGoal = goal.position - tf.position;
+		while(vecToGoal.magnitude > proximity){
+			vecToGoal = goal.position - tf.position;
+			if (!GameManager.instance.isPaused) {
+				tf.position += tf.up * Time.deltaTime * playerSpeed ;
+			}
+			yield return null;
 			}
 		isMoving = false;
+		position--;
 	}
 	IEnumerator MoveDown(){
 		isMoving = true;
-			for (int i = 0; i < distance;) {
-				if (!GameManager.instance.isPaused) {
-					tf.position -= tf.up * Time.deltaTime * playerSpeed;
-					i++;
-				}
+		goal = positions [position + 1];
+		Vector3 vecToGoal = goal.position - tf.position;
+		while(vecToGoal.magnitude > proximity){
+			vecToGoal = goal.position - tf.position;
+			if (!GameManager.instance.isPaused) {
+				tf.position -= tf.up * Time.deltaTime * playerSpeed ;
+			}
 				yield return null;
 			}
 		isMoving = false;
+		position++;
 	}
 
 	public void Hit(){

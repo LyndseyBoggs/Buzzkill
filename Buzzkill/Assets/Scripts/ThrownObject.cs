@@ -13,7 +13,7 @@ public class ThrownObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		tf.position += tf.right * Time.deltaTime * speed;
+		tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
