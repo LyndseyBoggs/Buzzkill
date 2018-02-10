@@ -15,6 +15,8 @@ public class BeeMovement : MonoBehaviour {
 	public Transform[] positions;
 	public Transform goal;
 	public float proximity;
+	//[HideInInspector]
+	public bool hasShield;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +48,7 @@ public class BeeMovement : MonoBehaviour {
 		while(vecToGoal.magnitude > proximity){
 			vecToGoal = goal.position - tf.position;
 			if (!GameManager.instance.isPaused) {
-				tf.position += tf.up * Time.deltaTime * playerSpeed ;
+				tf.position += tf.up * Time.deltaTime * playerSpeed;
 			}
 			yield return null;
 			}
@@ -60,7 +62,7 @@ public class BeeMovement : MonoBehaviour {
 		while(vecToGoal.magnitude > proximity){
 			vecToGoal = goal.position - tf.position;
 			if (!GameManager.instance.isPaused) {
-				tf.position -= tf.up * Time.deltaTime * playerSpeed ;
+				tf.position -= tf.up * Time.deltaTime * playerSpeed;
 			}
 				yield return null;
 			}
@@ -69,10 +71,14 @@ public class BeeMovement : MonoBehaviour {
 	}
 
 	public void Hit(){
-		if (enemyChasing.currentState == ChasingEnemy.States.idle) {
-			enemyChasing.currentState = ChasingEnemy.States.chasing;
-		} else if (enemyChasing.currentState == ChasingEnemy.States.chasing) {
-			enemyChasing.currentState = ChasingEnemy.States.killing;
+		if (!hasShield) {
+			if (enemyChasing.currentState == ChasingEnemy.States.idle) {
+				enemyChasing.currentState = ChasingEnemy.States.chasing;
+			} else if (enemyChasing.currentState == ChasingEnemy.States.chasing) {
+				enemyChasing.currentState = ChasingEnemy.States.killing;
+			}
+		} else {
+			hasShield = false;
 		}
 	}
 

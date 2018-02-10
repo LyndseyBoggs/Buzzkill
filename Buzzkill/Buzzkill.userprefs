@@ -1,15 +1,37 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RandomSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\BeeMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="35" Column="104" />
-      <File FileName="Assets\Scripts\RandomSpawner.cs" Line="29" Column="68" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="25" Column="85" />
+      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="65" Column="57" />
+      <File FileName="Assets\Scripts\EnemySpawner.cs" Line="8" Column="32" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="25" Column="86" />
       <File FileName="Assets\Scripts\ChasingEnemy.cs" Line="40" Column="86" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="20" Column="33" />
-      <File FileName="Assets\Scripts\ThrownObject.cs" Line="16" Column="85" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ThrownObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EndOfScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PowerupSpawner.cs" Line="24" Column="55" />
+      <File FileName="Assets\Scripts\Powerups.cs" Line="29" Column="25" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Buzzkill" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Player" expanded="True">
+                  <Node name="BeeMovement.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="Buzzkill" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -56,12 +56,14 @@
      <Compile Include="Assets\Scripts\EndOfScreen.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
      <Compile Include="Assets\Scripts\Player\BeeMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\StingAttack.cs" />
-     <Compile Include="Assets\Scripts\RandomSpawner.cs" />
+     <Compile Include="Assets\Scripts\Powerups.cs" />
+     <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
      <Compile Include="Assets\Scripts\ThrownObject.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/frehunt/Documents/Buzzkill/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
