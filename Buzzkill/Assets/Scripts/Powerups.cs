@@ -26,6 +26,7 @@ public class Powerups : MonoBehaviour {
 		BeeMovement player = other.GetComponent<BeeMovement> ();
 		if (player) {
 			player.hasShield = true;
+			player.sRend.color = Color.green;
 			Destroy (gameObject);
 		}
 	}
