@@ -5,6 +5,7 @@ using UnityEngine;
 public class BeeMovement : MonoBehaviour {
 	[HideInInspector]
 	public Transform tf;
+	private Vector3 startPos;
 	public float distance;
 	public float playerSpeed = 5.0f;
 	public int position = 1;
@@ -24,10 +25,14 @@ public class BeeMovement : MonoBehaviour {
 		tf = GetComponent<Transform> ();
 		enemyChasing = GameObject.FindObjectOfType<ChasingEnemy> ();
 		sRend = GetComponent<SpriteRenderer> ();
+		startPos = tf.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (tf.position.y > 35 || tf.position.y < -35) {
+			tf.position = startPos;
+		}
 		if (GameManager.instance.isPaused || GameManager.instance.isGameOver) {
 			return;
 		}
