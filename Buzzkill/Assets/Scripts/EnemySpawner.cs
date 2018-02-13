@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour {
 	[SerializeField]
 	private GameObject[] objsPossible;
 	private GameObject objToSpawn;
+	public GameObject spawnedObj;
 	[Tooltip ("Higher the number, lower the spawn chance"), SerializeField]
 	private int spawnChance;
 	Transform tf;
@@ -21,13 +22,16 @@ public class EnemySpawner : MonoBehaviour {
 			return;
 		}
 		int randoNum = Random.Range (0, spawnChance);
-		if (randoNum == 0) {
+		if (randoNum == 0 && !spawnedObj) {
 			spawnChance = 500 / (int) GameManager.instance.worldSpeed;
 			randoNum = Random.Range (0, objsPossible.Length);
 			objToSpawn = objsPossible [randoNum].gameObject;
-			Instantiate (objToSpawn, tf.position, tf.rotation);
+			spawnedObj = Instantiate (objToSpawn, tf.position, tf.rotation);
 		} else {
 			spawnChance--;	
+			if (spawnChance <= 1) {
+				spawnChance = 1;
+			}
 		}
 	}
 }
