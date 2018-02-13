@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChasingEnemy.cs" />
+     <Compile Include="Assets\Scripts\ChunkOfMap.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
      <Compile Include="Assets\Scripts\DestroyStinger_Keffny.cs" />
      <Compile Include="Assets\Scripts\EndOfScreen.cs" />
