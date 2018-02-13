@@ -17,11 +17,13 @@ public class BeeMovement : MonoBehaviour {
 	public float proximity;
 	//[HideInInspector]
 	public bool hasShield;
+	public SpriteRenderer sRend;
 
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
 		enemyChasing = GameObject.FindObjectOfType<ChasingEnemy> ();
+		sRend = GetComponent<SpriteRenderer> ();
 	}
 	
 	// Update is called once per frame
@@ -79,6 +81,7 @@ public class BeeMovement : MonoBehaviour {
 			}
 		} else {
 			hasShield = false;
+			sRend.color = Color.white;
 		}
 	}
 

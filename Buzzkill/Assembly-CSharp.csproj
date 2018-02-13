@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChasingEnemy.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
+     <Compile Include="Assets\Scripts\DestroyStinger_Keffny.cs" />
      <Compile Include="Assets\Scripts\EndOfScreen.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\Player\StingAttack.cs" />
      <Compile Include="Assets\Scripts\Powerups.cs" />
      <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
+     <Compile Include="Assets\Scripts\StingShooter_Keffny.cs" />
      <Compile Include="Assets\Scripts\ThrownObject.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/frehunt/Documents/Buzzkill/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

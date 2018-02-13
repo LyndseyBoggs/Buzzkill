@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 		} else {
 			Destroy (gameObject);
 		}
+		DontDestroyOnLoad (instance);
 	}
 	
 	// Update is called once per frame
@@ -52,11 +53,23 @@ public class GameManager : MonoBehaviour {
 		}
 		if (!isGameOver) {
 			score++;
-			scoreText.text = "Score: " + score;
+			if (scoreText) {
+				scoreText.text = "Score: " + score;
+			}
 		} else {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				SceneManager.LoadScene (0);
+				isGameOver = false;
+				score = 0;
 			}
+			Text finalScoreText = GameObject.FindObjectOfType<Text> ();
+			finalScoreText.text = "Your Score: " + score;
+		}
+		if (!scoreText) {
+			scoreText = GameObject.FindGameObjectWithTag ("ScoreText").GetComponent<Text>();
+		}
+		if (!highScoreText) {
+			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
 	}
 
@@ -68,5 +81,6 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("HighScore", highScore);
 			PlayerPrefs.Save ();
 		}
+		SceneManager.LoadScene (1);
 	}
 }
