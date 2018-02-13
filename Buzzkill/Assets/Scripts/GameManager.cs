@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour {
 				SceneManager.LoadScene (0);
 				isGameOver = false;
 				score = 0;
+				worldSpeed = 1;
+				scoreOfLastSpeedUp = 0;
 			}
 			Text finalScoreText = GameObject.FindObjectOfType<Text> ();
 			finalScoreText.text = "Your Score: " + score;
