@@ -31,5 +31,6 @@ public class StingShooter_Keffny : MonoBehaviour
 		timer = 0f;
 		//Instantiate(stingerShot, stingerShoot.position, stingerShoot.rotation);
 		Rigidbody2D beeStinger = Instantiate(stingerShot, stingerShoot.position, stingerShoot.rotation) as Rigidbody2D;
+		Debug.Log ("GSFASF");
 	}
 }

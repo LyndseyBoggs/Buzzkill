@@ -18,7 +18,10 @@ public class DestroyStinger_Keffny : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Destroy(other.gameObject);
-		Destroy(this.gameObject);
+		EnemyMove enemy = other.GetComponent<EnemyMove> ();
+		if (enemy) {
+			Destroy (other.gameObject);
+			Destroy (this.gameObject);
+		}
 	}
 }

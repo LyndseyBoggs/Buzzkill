@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AddPoints_Keffny.cs" />
+     <Compile Include="Assets\Scripts\AIDoge_Keffny.cs" />
+     <Compile Include="Assets\Scripts\BackGroundMove.cs" />
+     <Compile Include="Assets\Scripts\BackgroundSpawn.cs" />
      <Compile Include="Assets\Scripts\ChasingEnemy.cs" />
      <Compile Include="Assets\Scripts\ChunkOfMap.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
@@ -61,6 +65,7 @@
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
      <Compile Include="Assets\Scripts\Player\BeeAttack_Melee.cs" />
      <Compile Include="Assets\Scripts\Player\BeeMovement.cs" />
@@ -70,8 +75,10 @@
      <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
      <Compile Include="Assets\Scripts\SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Shank.cs" />
+     <Compile Include="Assets\Scripts\SpawnDog_Keffny.cs" />
      <Compile Include="Assets\Scripts\StingShooter_Keffny.cs" />
      <Compile Include="Assets\Scripts\ThrownObject.cs" />
+     <Compile Include="Assets\Scripts\Timer_Keffny.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/frehunt/Documents/Buzzkill/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

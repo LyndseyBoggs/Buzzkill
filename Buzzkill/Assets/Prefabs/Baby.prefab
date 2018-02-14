@@ -81,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   throwRange: 75
-  objToThrow: {fileID: 1414853809675470, guid: 0a6908bb896501b4fad38271dccaf7cb, type: 2}
+  objToThrow: {fileID: 1044273047209682, guid: a932b47cb28cf1649a51d83db1f44f42, type: 2}
+  isDead: 0
 --- !u!114 &114911699212700054
 MonoBehaviour:
   m_ObjectHideFlags: 1
