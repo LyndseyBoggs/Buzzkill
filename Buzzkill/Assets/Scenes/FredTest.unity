@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objsPossible:
   - {fileID: 1340294673518470, guid: d9a899df89479844c9a0239429a8d25d, type: 2}
-  - {fileID: 1390171770911702, guid: 79ed11236e51d2c41a412653eb5d4980, type: 2}
+  - {fileID: 1193104866818100, guid: 2a52cfb7ab6372146bf01ca23aab1f36, type: 2}
   - {fileID: 1124398486716082, guid: 49e0fd45d98734646ba242e3f7a63d19, type: 2}
   spawnedObj: {fileID: 0}
   spawnChance: 200
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objsPossible:
   - {fileID: 1340294673518470, guid: d9a899df89479844c9a0239429a8d25d, type: 2}
-  - {fileID: 1390171770911702, guid: 79ed11236e51d2c41a412653eb5d4980, type: 2}
+  - {fileID: 1193104866818100, guid: 2a52cfb7ab6372146bf01ca23aab1f36, type: 2}
   - {fileID: 1124398486716082, guid: 49e0fd45d98734646ba242e3f7a63d19, type: 2}
   spawnedObj: {fileID: 0}
   spawnChance: 200
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objsPossible:
   - {fileID: 1340294673518470, guid: d9a899df89479844c9a0239429a8d25d, type: 2}
-  - {fileID: 1390171770911702, guid: 79ed11236e51d2c41a412653eb5d4980, type: 2}
+  - {fileID: 1193104866818100, guid: 2a52cfb7ab6372146bf01ca23aab1f36, type: 2}
   - {fileID: 1124398486716082, guid: 49e0fd45d98734646ba242e3f7a63d19, type: 2}
   spawnedObj: {fileID: 0}
   spawnChance: 200
