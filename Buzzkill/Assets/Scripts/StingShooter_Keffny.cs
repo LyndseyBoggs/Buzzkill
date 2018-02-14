@@ -6,6 +6,8 @@ public class StingShooter_Keffny : MonoBehaviour
 {
 	public Rigidbody2D stingerShot;
 	public Transform stingerShoot;
+	public float coolDown = 10f;
+	float timer;
 
 	// Use this for initialization
 	void Start ()
@@ -16,7 +18,9 @@ public class StingShooter_Keffny : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(Input.GetKeyDown(KeyCode.Space))
+		timer += Time.deltaTime;
+
+		if(timer >= coolDown && Input.GetKeyDown(KeyCode.Space))
 		{
 			Sting();
 		}
@@ -24,6 +28,7 @@ public class StingShooter_Keffny : MonoBehaviour
 
 	void Sting()
 	{
+		timer = 0f;
 		//Instantiate(stingerShot, stingerShoot.position, stingerShoot.rotation);
 		Rigidbody2D beeStinger = Instantiate(stingerShot, stingerShoot.position, stingerShoot.rotation) as Rigidbody2D;
 	}
