@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour {
 			return;
 		}
 		int randoNum = Random.Range (0, spawnChance);
-		if (randoNum == 0 && !spawnedObj) {
+		if (randoNum == 0 ){//&& !spawnedObj) {
 			spawnChance = 500 / (int) GameManager.instance.worldSpeed;
 			randoNum = Random.Range (0, objsPossible.Length);
 			objToSpawn = objsPossible [randoNum].gameObject;

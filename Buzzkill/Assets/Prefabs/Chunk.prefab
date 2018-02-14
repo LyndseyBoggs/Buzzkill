@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212527756388405378}
   - component: {fileID: 61623470120858224}
   - component: {fileID: 114366237662851480}
+  - component: {fileID: 114199123299412026}
   m_Layer: 0
   m_Name: Baby
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 212952794446745276}
   - component: {fileID: 61152475516596430}
   - component: {fileID: 114121755304246412}
+  - component: {fileID: 114890173258792608}
   m_Layer: 0
   m_Name: TeenBoy
   m_TagString: Untagged
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 212699779987010100}
   - component: {fileID: 61988342712357750}
   - component: {fileID: 114852287920379614}
+  - component: {fileID: 114757154229150224}
   m_Layer: 0
   m_Name: TeenGirl
   m_TagString: Untagged
@@ -114,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987115704997308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -364.81143, y: -57.370525, z: 11.0625}
+  m_LocalPosition: {x: -55.123985, y: -7.6449423, z: 11.0625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355144911610064}
@@ -225,6 +228,20 @@ MonoBehaviour:
   speed: 10
   throwRange: 75
   objToThrow: {fileID: 1414853809675470, guid: 0a6908bb896501b4fad38271dccaf7cb, type: 2}
+--- !u!114 &114199123299412026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424111191200504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1927a960afb49e4690afd4093ef6330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentHealth: 1
+  sinkSpeed: 2.5
 --- !u!114 &114282821326704372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22623294326cab4584085e44e5e92e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objs: []
+  owner: {fileID: 0}
 --- !u!114 &114366237662851480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +269,20 @@ MonoBehaviour:
   speed: 10
   throwRange: 75
   objToThrow: {fileID: 1414853809675470, guid: 0a6908bb896501b4fad38271dccaf7cb, type: 2}
+--- !u!114 &114757154229150224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901069384637372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1927a960afb49e4690afd4093ef6330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentHealth: 1
+  sinkSpeed: 2.5
 --- !u!114 &114852287920379614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,6 +297,20 @@ MonoBehaviour:
   speed: 10
   throwRange: 75
   objToThrow: {fileID: 1414853809675470, guid: 0a6908bb896501b4fad38271dccaf7cb, type: 2}
+--- !u!114 &114890173258792608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846496005577032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1927a960afb49e4690afd4093ef6330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentHealth: 1
+  sinkSpeed: 2.5
 --- !u!212 &212527756388405378
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -298,7 +345,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b72d2a8d3df71c54ebdd20c6470b64fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9d8f837959b54e4295d0cdbce3b96d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -342,7 +389,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a7f867c4753d0549a977035c204b36a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0471617b60afe844ba3e518f73ede960, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -386,7 +433,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 018f2162ada01c2499ff165a6d94210d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 955fb9464734fa94988b338056db38e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -10,6 +10,8 @@ public class EnemyMove : MonoBehaviour {
 	BeeMovement player;
 	public GameObject objToThrow;
 	private bool thrown;
+	[HideInInspector]
+	public bool isDead;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +24,12 @@ public class EnemyMove : MonoBehaviour {
 		if (GameManager.instance.isPaused) {
 			return;
 		}
-		tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+		if (!isDead) {
+			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+		} else {
+			speed = 10;
+			tf.position -= tf.up;
+		}
 		if (!thrown) {
 			if ((player.transform.position.x - tf.position.x) < throwRange) {
 				ThrowObj ();
