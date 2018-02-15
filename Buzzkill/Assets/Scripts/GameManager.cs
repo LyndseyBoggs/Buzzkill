@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour {
 	public float worldSpeed = 1;
 	public int scoreToSpeedUp;
 	public float speedIncrement;
-	private int scoreOfLastSpeedUp;
+	[HideInInspector]
+	public int scoreOfLastSpeedUp;
 
 	// Use this for initialization
 	void Start () {
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour {
 			}
 		} else {
 			if (Input.GetKeyDown (KeyCode.R)) {
-				SceneManager.LoadScene (0);
+				SceneManager.LoadScene (1);
 				isGameOver = false;
 				score = 0;
 				worldSpeed = 1;
@@ -83,6 +84,6 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("HighScore", highScore);
 			PlayerPrefs.Save ();
 		}
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (2);
 	}
 }
