@@ -16,10 +16,16 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (1);
+		GameManager.instance.isGameOver = false;
+		GameManager.instance.score = 0;
+		GameManager.instance.worldSpeed = 1;
+		GameManager.instance.scoreOfLastSpeedUp = 0;
 	}
 
 	public void MainMenu(){
-		SceneManager.LoadScene (2);
+		GameManager.instance.isGameOver = false;
+		SceneManager.LoadScene (0);
 	}
 }
