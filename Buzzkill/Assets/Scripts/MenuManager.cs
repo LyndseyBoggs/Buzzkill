@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
+	public GameObject pauseMenu;
+	public GameObject pauseButton;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +15,6 @@ public class MenuManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public void StartGame(){
@@ -22,10 +24,17 @@ public class MenuManager : MonoBehaviour {
 		GameManager.instance.score = 0;
 		GameManager.instance.worldSpeed = 1;
 		GameManager.instance.scoreOfLastSpeedUp = 0;
+		GameManager.instance.isPaused = false;
 	}
 
 	public void MainMenu(){
 		GameManager.instance.isGameOver = false;
 		SceneManager.LoadScene (0);
+	}
+
+	public void Pause(){
+		GameManager.instance.Pause ();
+		pauseMenu.SetActive (!pauseMenu.activeSelf);
+		pauseButton.SetActive (!pauseButton.activeSelf);
 	}
 }

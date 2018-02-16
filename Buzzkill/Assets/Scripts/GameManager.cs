@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 	public int scoreOfLastSpeedUp;
 	public int coins;
 	public Text coinText;
+	public MenuManager menuManager;
 
 	// Use this for initialization
 	void Start () {
@@ -79,6 +80,9 @@ public class GameManager : MonoBehaviour {
 		}
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
+		}
+		if (!menuManager) {
+			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
 		coinText.text = "Coins: " + coins;
 	}
