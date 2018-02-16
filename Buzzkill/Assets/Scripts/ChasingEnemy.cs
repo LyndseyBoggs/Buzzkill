@@ -23,6 +23,7 @@ public class ChasingEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 vecToGoal = (player.tf.position + offset) - tf.position;
+		Vector3.Normalize (vecToGoal);
 		if (currentState == States.idle) {
 			offset = idleOffset;
 			isChasing = false;

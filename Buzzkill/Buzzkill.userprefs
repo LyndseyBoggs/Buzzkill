@@ -1,19 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyDeath.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MenuManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="65" Column="57" />
-      <File FileName="Assets\Scripts\EnemySpawner.cs" Line="8" Column="32" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="25" Column="86" />
-      <File FileName="Assets\Scripts\ChasingEnemy.cs" Line="40" Column="86" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ThrownObject.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\Player\BeeMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemySpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ChasingEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="20" Column="19" />
+      <File FileName="Assets\Scripts\ThrownObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EndOfScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PowerupSpawner.cs" Line="24" Column="55" />
-      <File FileName="Assets\Scripts\Powerups.cs" Line="29" Column="25" />
-      <File FileName="Assets\Scripts\Shank.cs" Line="26" Column="22" />
-      <File FileName="Assets\Scripts\EnemyDeath.cs" Line="11" Column="31" />
-      <File FileName="Assets\Scripts\Death.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\PowerupSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Powerups.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Shank.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyDeath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Death.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MenuManager.cs" Line="28" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

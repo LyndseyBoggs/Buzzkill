@@ -19,6 +19,7 @@ public class BeeMovement : MonoBehaviour {
 	//[HideInInspector]
 	public bool hasShield;
 	public SpriteRenderer sRend;
+	public GameObject shieldSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -86,7 +87,7 @@ public class BeeMovement : MonoBehaviour {
 			}
 		} else {
 			hasShield = false;
-			sRend.color = Color.white;
+			shieldSprite.SetActive (false);
 		}
 	}
 
