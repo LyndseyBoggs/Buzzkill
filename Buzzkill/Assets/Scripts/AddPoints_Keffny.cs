@@ -23,7 +23,7 @@ public class AddPoints_Keffny : MonoBehaviour
 	{
 		if(other.gameObject.name == "Cube(Clone)")
 		{
-			gameManager.score += points;
+			GameManager.instance.score += points;
 		}
 	}
 }

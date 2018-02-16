@@ -12,11 +12,14 @@ public class EnemyMove : MonoBehaviour {
 	private bool thrown;
 	[HideInInspector]
 	public bool isDead;
-
+	public int coinMin;
+	public int coinMax;
+	public int coinValue;
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
 		player = GameObject.FindObjectOfType<BeeMovement> ();
+		coinValue = Random.Range (coinMin, coinMax);
 	}
 	
 	// Update is called once per frame
@@ -36,10 +39,7 @@ public class EnemyMove : MonoBehaviour {
 			}
 		}
 	}
-
-	void OnTriggerEnter2D(Collider2D other){
 		
-	}
 
 	void ThrowObj(){
 		Instantiate (objToThrow, transform.position, transform.rotation);

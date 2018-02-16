@@ -26,6 +26,7 @@ public class BeeAttack_Melee : MonoBehaviour {
 			if (!enemy.isDead) {
 				enemy.isDead = true;
 				GameManager.instance.score += scoreForKill;
+				GameManager.instance.coins += enemy.coinValue;
 				StopAllCoroutines ();
 				isAttacking = false;
 			}

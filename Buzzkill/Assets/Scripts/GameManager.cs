@@ -19,10 +19,13 @@ public class GameManager : MonoBehaviour {
 	public float speedIncrement;
 	[HideInInspector]
 	public int scoreOfLastSpeedUp;
+	public int coins;
+	public Text coinText;
 
 	// Use this for initialization
 	void Start () {
 		highScore = PlayerPrefs.GetInt ("HighScore");
+		coins = PlayerPrefs.GetInt ("CoinsOwned");
 		highScoreText.text = " High Score: " + highScore;
 		if (!instance) {
 			instance = this;
@@ -74,10 +77,15 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
+		if (!coinText) {
+			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
+		}
+		coinText.text = "Coins: " + coins;
 	}
 
 	public void GameOver(){
 		isGameOver = true;
+		PlayerPrefs.SetInt ("CoinsOwned", coins);
 		if (score > highScore) {
 			highScore = score;
 			highScoreText.text = " High Score: " + highScore;
@@ -85,5 +93,9 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.Save ();
 		}
 		SceneManager.LoadScene (2);
+	}
+
+	public void Pause(){
+		isPaused = !isPaused;
 	}
 }

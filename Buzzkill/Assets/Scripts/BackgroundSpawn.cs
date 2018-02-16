@@ -5,27 +5,23 @@ using UnityEngine;
 public class BackgroundSpawn : MonoBehaviour {
 
 	public GameObject[] objsToSpawn;
-	private Transform tf;
-	public bool waiting;
+	public Transform spawnLocation;
 
 	// Use this for initialization
 	void Start () {
-		tf = GetComponent<Transform> ();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!waiting) {
-			StartCoroutine (SpawnBackground ());
-		}
+		
 	}
 
-	IEnumerator SpawnBackground(){
-		waiting = true;
+	void OnTriggerEnter2D(Collider2D other){
 		int rando = Random.Range (0, objsToSpawn.Length);
-		GameObject spawned = Instantiate (objsToSpawn [rando], tf.position, tf.rotation);
-		Destroy (spawned, 20);
-		yield return new WaitForSeconds (10f);
-		waiting = false;
+		Instantiate (objsToSpawn [rando].gameObject, spawnLocation.position, spawnLocation.rotation);
+		Destroy (other.gameObject);
 	}
+
+
 }
