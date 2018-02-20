@@ -8,6 +8,9 @@ public class BeeAttack_Melee : MonoBehaviour {
 	public float attackLength;
 	public int scoreForKill;
 
+	public float Dtimer;
+	public bool hasCoin = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,12 +21,29 @@ public class BeeAttack_Melee : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			StartCoroutine (Attack ());
 		}
+
+		if (Dtimer > 0f)
+		{
+			Dtimer -= Time.deltaTime;
+			if(Dtimer <= 0f)
+			{
+				hasCoin = false;
+			}
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other){
 		EnemyMove enemy = other.gameObject.GetComponent<EnemyMove> ();
 		if (enemy && isAttacking) {
-			if (!enemy.isDead) {
+			if (hasCoin == true)
+			{
+				enemy.isDead = true;
+				GameManager.instance.score += scoreForKill;
+				GameManager.instance.coins += enemy.coinValue *= 2;
+				StopAllCoroutines();
+				isAttacking = false;
+			}
+			else{
 				enemy.isDead = true;
 				GameManager.instance.score += scoreForKill;
 				GameManager.instance.coins += enemy.coinValue;

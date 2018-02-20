@@ -90,5 +90,4 @@ public class BeeMovement : MonoBehaviour {
 			shieldSprite.SetActive (false);
 		}
 	}
-
 }

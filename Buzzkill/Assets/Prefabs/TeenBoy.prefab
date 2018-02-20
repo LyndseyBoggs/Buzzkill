@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114170328102697370}
   m_Layer: 0
   m_Name: TeenBoy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,9 @@ MonoBehaviour:
   throwRange: 75
   objToThrow: {fileID: 1044273047209682, guid: a932b47cb28cf1649a51d83db1f44f42, type: 2}
   isDead: 0
+  coinMin: 0
+  coinMax: 0
+  coinValue: 0
 --- !u!212 &212470280774457006
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -106,7 +109,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -122,7 +124,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -139,5 +140,3 @@ SpriteRenderer:
   m_Size: {x: 21, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
