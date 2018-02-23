@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddPoints_Keffny : MonoBehaviour
 {
-	public static int points = 100;
+	public int points = 100;
 
 	// Use this for initialization
 	void Start ()

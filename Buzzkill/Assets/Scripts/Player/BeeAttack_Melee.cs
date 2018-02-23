@@ -34,12 +34,12 @@ public class BeeAttack_Melee : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 		EnemyMove enemy = other.gameObject.GetComponent<EnemyMove> ();
-		if (enemy && isAttacking) {
+		if (enemy && isAttacking && !enemy.isDead) {
 			if (hasCoin == true)
 			{
 				enemy.isDead = true;
 				GameManager.instance.score += scoreForKill;
-				GameManager.instance.coins += enemy.coinValue *= 2;
+				GameManager.instance.coins += enemy.coinValue * 2;
 				StopAllCoroutines();
 				isAttacking = false;
 			}

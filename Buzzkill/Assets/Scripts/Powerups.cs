@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Powerups : MonoBehaviour {
 
-	public enum PowerupList {shield, powerup1, powerup2}
+	public enum PowerupList {shield, powerup1, powerup2, doublePoints}
 	public PowerupList powerup;
 	Transform tf;
 	public float speed;
@@ -25,9 +25,16 @@ public class Powerups : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		BeeMovement player = other.GetComponent<BeeMovement> ();
 		if (player) {
-			player.hasShield = true;
-			player.shieldSprite.SetActive (true);
-			Destroy (gameObject);
+			switch(powerup){
+			case PowerupList.shield:
+				player.hasShield = true;
+				player.shieldSprite.SetActive (true);
+				Destroy (gameObject);
+				break;
+			case PowerupList.doublePoints:
+				//TODO: Add double coin code
+				break;
+			}
 		}
 	}
 }
