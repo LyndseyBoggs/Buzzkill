@@ -24,6 +24,8 @@ public class Powerups : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		BeeMovement player = other.GetComponent<BeeMovement> ();
+		BeeAttack_Melee Battack = other.GetComponent<BeeAttack_Melee>();
+
 		if (player) {
 			switch(powerup){
 			case PowerupList.shield:
@@ -33,6 +35,12 @@ public class Powerups : MonoBehaviour {
 				break;
 			case PowerupList.doublePoints:
 				//TODO: Add double coin code
+				if(player)
+				{
+					Battack.Dtimer = 10f;
+					Battack.hasCoin = true;
+					Destroy(gameObject);
+				}
 				break;
 			}
 		}

@@ -19,14 +19,17 @@ public class GameManager : MonoBehaviour {
 	public float speedIncrement;
 	[HideInInspector]
 	public int scoreOfLastSpeedUp;
-	public int coins;
+	public int maxCoins;
 	public Text coinText;
 	public MenuManager menuManager;
+
+	public int coins;
+	public Text coinsText;
 
 	// Use this for initialization
 	void Start () {
 		highScore = PlayerPrefs.GetInt ("HighScore");
-		coins = PlayerPrefs.GetInt ("CoinsOwned");
+		maxCoins = PlayerPrefs.GetInt ("CoinsOwned");
 		highScoreText.text = " High Score: " + highScore;
 		if (!instance) {
 			instance = this;
@@ -69,8 +72,6 @@ public class GameManager : MonoBehaviour {
 				worldSpeed = 1;
 				scoreOfLastSpeedUp = 0;
 			}
-			Text finalScoreText = GameObject.FindObjectOfType<Text> ();
-			finalScoreText.text = "Your Score: " + score;
 		}
 		if (!scoreText) {
 			scoreText = GameObject.FindGameObjectWithTag ("ScoreText").GetComponent<Text>();
@@ -84,12 +85,13 @@ public class GameManager : MonoBehaviour {
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
-		coinText.text = "Coins: " + coins;
+		coinText.text = "Max Coins: " + maxCoins;
+		coinsText.text = "Coins: " + coins;
 	}
 
 	public void GameOver(){
 		isGameOver = true;
-		PlayerPrefs.SetInt ("CoinsOwned", coins);
+		PlayerPrefs.SetInt ("CoinsOwned", maxCoins);
 		if (score > highScore) {
 			highScore = score;
 			highScoreText.text = " High Score: " + highScore;

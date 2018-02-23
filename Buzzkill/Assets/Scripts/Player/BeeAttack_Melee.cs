@@ -7,6 +7,7 @@ public class BeeAttack_Melee : MonoBehaviour {
 	public bool isAttacking;
 	public float attackLength;
 	public int scoreForKill;
+	public static int killedEnemies;
 
 	public float Dtimer;
 	public bool hasCoin = false;
@@ -40,15 +41,19 @@ public class BeeAttack_Melee : MonoBehaviour {
 				enemy.isDead = true;
 				GameManager.instance.score += scoreForKill;
 				GameManager.instance.coins += enemy.coinValue * 2;
+				GameManager.instance.maxCoins += enemy.coinValue * 2;
 				StopAllCoroutines();
 				isAttacking = false;
+				killedEnemies++;
 			}
 			else{
 				enemy.isDead = true;
 				GameManager.instance.score += scoreForKill;
 				GameManager.instance.coins += enemy.coinValue;
+				GameManager.instance.maxCoins += enemy.coinValue;
 				StopAllCoroutines ();
 				isAttacking = false;
+				killedEnemies++;
 			}
 		}
 	}
