@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aimAnimation: {fileID: 21300000, guid: 932758264a55f53458b7ee60a0b3b4d6, type: 3}
+  aggroRange: 100
   speed: 10
   throwRange: 75
   objToThrow: {fileID: 1044273047209682, guid: a932b47cb28cf1649a51d83db1f44f42, type: 2}
@@ -86,6 +88,7 @@ MonoBehaviour:
   coinMin: 1
   coinMax: 5
   coinValue: 0
+  deadAnimation: {fileID: 21300000, guid: 43875c7d5a3b7844494f6981e79b85e0, type: 3}
 --- !u!114 &114327388347800088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +112,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -124,6 +128,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -140,3 +145,5 @@ SpriteRenderer:
   m_Size: {x: 21, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

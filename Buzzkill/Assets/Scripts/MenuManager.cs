@@ -37,4 +37,9 @@ public class MenuManager : MonoBehaviour {
 		pauseMenu.SetActive (!pauseMenu.activeSelf);
 		pauseButton.SetActive (!pauseButton.activeSelf);
 	}
+
+	public void Exit(){
+		Application.Quit ();
+	}
+		
 }

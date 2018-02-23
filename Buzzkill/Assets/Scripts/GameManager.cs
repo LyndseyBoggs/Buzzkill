@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 			Application.Quit ();
 		}
 		if (Input.GetKeyDown (pauseButton)) {
-			isPaused = !isPaused;
+			menuManager.Pause ();
 		}
 		if (isPaused) {
 			Time.timeScale = 0;
