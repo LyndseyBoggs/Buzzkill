@@ -20,9 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4027961683265378}
   - component: {fileID: 212439724980073150}
-  - component: {fileID: 114683083204196974}
   - component: {fileID: 61926861138795342}
-  - component: {fileID: 114759648587468180}
+  - component: {fileID: 114258884935356528}
   m_Layer: 0
   m_Name: plotting
   m_TagString: Untagged
@@ -68,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.15, y: 2.84}
   m_EdgeRadius: 0
---- !u!114 &114683083204196974
+--- !u!114 &114258884935356528
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,22 +75,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358542852220154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9749bc4e3262e4c90cdc896546de36, type: 3}
+  m_Script: {fileID: 11500000, guid: d65dec5b4be2068448e9f0b142550bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114759648587468180
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358542852220154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74384b5298a7bdd449d51a02ee4f67ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 10
-  userDirection: {x: 1, y: 0, z: 0}
+  powerup: 3
+  speed: 10
 --- !u!212 &212439724980073150
 SpriteRenderer:
   m_ObjectHideFlags: 1
