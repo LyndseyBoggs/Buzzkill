@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
 
 	public int coins;
 	public Text coinsText;
+	public float distance;
+	public Text tDistnace;
 
 	// Use this for initialization
 	void Start () {
@@ -87,6 +89,8 @@ public class GameManager : MonoBehaviour {
 		}
 		coinText.text = "Max Coins: " + maxCoins;
 		coinsText.text = "Coins: " + coins;
+		distance = score * worldSpeed;
+		tDistnace.text = "Travel distance: " + distance;
 	}
 
 	public void GameOver(){

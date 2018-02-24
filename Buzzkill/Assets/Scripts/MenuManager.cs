@@ -24,6 +24,9 @@ public class MenuManager : MonoBehaviour {
 		GameManager.instance.score = 0;
 		GameManager.instance.worldSpeed = 1;
 		GameManager.instance.scoreOfLastSpeedUp = 0;
+		GameManager.instance.distance = 0;
+		GameManager.instance.coins = 0;
+		BeeAttack_Melee.killedEnemies = 0;
 		GameManager.instance.isPaused = false;
 	}
 

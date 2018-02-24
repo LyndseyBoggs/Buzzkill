@@ -17,7 +17,7 @@ public class GameOverUI_Keffny : MonoBehaviour
 	void Start ()
 	{
 		//timeAlive.text = "Time: " +;
-		//distanceTraveled.text = "Distance Traveled: " +;
+		distanceTraveled.text = "Distance Traveled: " + GameManager.instance.distance;
 		peopleStung.text = "People Stung: " + BeeAttack_Melee.killedEnemies;
 		coinsCollected.text = "Coins Collected: " + GameManager.instance.coins;
 		maxCoins.text = "Max Coins: " + GameManager.instance.maxCoins;
