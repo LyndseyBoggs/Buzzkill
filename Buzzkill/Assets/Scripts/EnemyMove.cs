@@ -35,13 +35,13 @@ public class EnemyMove : MonoBehaviour {
 		if (!isDead) {
 			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
 		} else {
-			sRend.sprite = deadAnimation;
+			//sRend.sprite = deadAnimation;
 			speed = 10;
 			tf.position -= tf.up;
 		}
 		if (!thrown) {
 			if ((player.transform.position.x - tf.position.x) < aggroRange) {
-				sRend.sprite = aimAnimation;
+			//	sRend.sprite = aimAnimation;
 			}
 			if ((player.transform.position.x - tf.position.x) < throwRange) {
 				ThrowObj ();
