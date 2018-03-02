@@ -19,7 +19,6 @@ public class MenuManager : MonoBehaviour {
 
 	public void StartGame(){
 		SceneManager.LoadScene (1);
-		SceneManager.LoadScene (1);
 		GameManager.instance.isGameOver = false;
 		GameManager.instance.score = 0;
 		GameManager.instance.worldSpeed = 1;

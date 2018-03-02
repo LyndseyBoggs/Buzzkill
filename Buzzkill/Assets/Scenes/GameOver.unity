@@ -354,7 +354,7 @@ MonoBehaviour:
   distanceTraveled: {fileID: 551495430}
   peopleStung: {fileID: 846358234}
   coinsCollected: {fileID: 1609735954}
-  maxCoins: {fileID: 1144264388}
+  totalCoins: {fileID: 1144264388}
   yourScore: {fileID: 179495316}
   yourhighScore: {fileID: 912811757}
 --- !u!1 &179495314
@@ -942,7 +942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Max Coins
+  m_Text: Total Coins
 --- !u!222 &1144264389
 CanvasRenderer:
   m_ObjectHideFlags: 0

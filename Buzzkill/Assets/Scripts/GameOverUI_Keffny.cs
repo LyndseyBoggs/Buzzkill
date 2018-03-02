@@ -9,7 +9,7 @@ public class GameOverUI_Keffny : MonoBehaviour
 	public Text distanceTraveled;
 	public Text peopleStung;
 	public Text coinsCollected;
-	public Text maxCoins;
+	public Text totalCoins;
 	public Text yourScore;
 	public Text yourhighScore;
 
@@ -20,7 +20,7 @@ public class GameOverUI_Keffny : MonoBehaviour
 		distanceTraveled.text = "Distance Traveled: " + GameManager.instance.distance;
 		peopleStung.text = "People Stung: " + BeeAttack_Melee.killedEnemies;
 		coinsCollected.text = "Coins Collected: " + GameManager.instance.coins;
-		maxCoins.text = "Max Coins: " + GameManager.instance.maxCoins;
+		totalCoins.text = "Total Coins: " + GameManager.instance.totalCoins;
 		yourScore.text = "Your Score: " + GameManager.instance.score;
 		yourhighScore.text = "High Score: " + GameManager.instance.highScore;
 	}
