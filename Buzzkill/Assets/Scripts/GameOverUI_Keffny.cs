@@ -16,11 +16,11 @@ public class GameOverUI_Keffny : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		//timeAlive.text = "Time: " +;
+		timeAlive.text = "Time: " + GameManager.instance.gameTimer;
 		distanceTraveled.text = "Distance Traveled: " + GameManager.instance.distance;
 		peopleStung.text = "People Stung: " + BeeAttack_Melee.killedEnemies;
 		coinsCollected.text = "Coins Collected: " + GameManager.instance.coins;
-		totalCoins.text = "Total Coins: " + GameManager.instance.totalCoins;
+		totalCoins.text = "Banked Coins: " + GameManager.instance.totalCoins;
 		yourScore.text = "Your Score: " + GameManager.instance.score;
 		yourhighScore.text = "High Score: " + GameManager.instance.highScore;
 	}

@@ -14,9 +14,16 @@ public class ChasingEnemy : MonoBehaviour {
 	public float speed;
 	bool isChasing;
 	public float chaseTime;
+
+	SpriteRenderer sRend;
+	public Sprite eating;
+	public float gameOver;
+	public float deathTimer = 2f;
+
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
+		sRend = GetComponent<SpriteRenderer>();
 		//player = GameObject.FindObjectOfType<BeeMovement> ();
 	}
 	
@@ -34,9 +41,15 @@ public class ChasingEnemy : MonoBehaviour {
 				isChasing = true;
 			}
 		} else if (currentState == States.killing) {
+			gameOver += Time.deltaTime;
 			offset = new Vector3 (0, 0, 0);
+			sRend.sprite = eating;
 			StopAllCoroutines ();
-			GameManager.instance.GameOver ();
+			if(gameOver >= deathTimer)
+			{
+				GameManager.instance.GameOver ();
+			}
+			//GameManager.instance.GameOver ();
 		}
 		tf.position += vecToGoal * Time.deltaTime * speed * GameManager.instance.worldSpeed;
 

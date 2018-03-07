@@ -14,6 +14,15 @@ public class BackGroundMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		tf.position += tf.right * speed * Time.deltaTime * GameManager.instance.worldSpeed;
+		//tf.position += tf.right * speed * Time.deltaTime * GameManager.instance.worldSpeed;
+
+		if(EgoStun_Keffny.isstunned == true)
+		{
+			tf.position += tf.right * speed * Time.deltaTime * GameManager.instance.tempWorldSpeed;
+		}
+		else
+		{
+			tf.position += tf.right * speed * Time.deltaTime * GameManager.instance.worldSpeed;
+		}
 	}
 }

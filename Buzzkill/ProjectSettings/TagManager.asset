@@ -7,6 +7,10 @@ TagManager:
   - HighScoreText
   - ScoreText
   - CoinsText
+  - Enemy
+  - DistanceText
+  - TimerText
+  - CurrentCoinText
   layers:
   - Default
   - TransparentFX

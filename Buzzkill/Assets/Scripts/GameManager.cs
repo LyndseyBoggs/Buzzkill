@@ -23,10 +23,14 @@ public class GameManager : MonoBehaviour {
 	public Text coinText;
 	public MenuManager menuManager;
 
-	public int coins;
+	//public float finalScore;
+	public float coins;
 	public Text coinsText;
 	public float distance;
 	public Text tDistnace;
+	public float gameTimer;
+	public Text gTimer;
+	public float tempWorldSpeed = .1f;
 
 	// Use this for initialization
 	void Start () {
@@ -83,10 +87,26 @@ public class GameManager : MonoBehaviour {
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
-		//coinText.text = "Max Coins: " + maxCoins;
-		coinText.text = "Coins: " + coins;
+
+		if(!coinsText)
+		{
+			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
+		}
+		if(!tDistnace)
+		{
+			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
+		}
+		if(!gTimer)
+		{
+			gTimer = GameObject.FindGameObjectWithTag("TimerText").GetComponent<Text>();
+		}
+		coinText.text = "Banked Coins: " + totalCoins;
+		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
-		//tDistnace.text = "Travel distance: " + distance;
+		tDistnace.text = "Travel distance: " + distance;
+		gameTimer += Time.deltaTime;
+		gTimer.text = "Timer: " + Mathf.Round(gameTimer);
+		//finalScore = gameTimer + distance + score + coins + BeeAttack_Melee.killedEnemies / 4 *.25;
 	}
 
 	public void GameOver(){

@@ -34,7 +34,6 @@ public class Powerups : MonoBehaviour {
 				Destroy (gameObject);
 				break;
 			case PowerupList.doublePoints:
-				//TODO: Add double coin code
 				if(player)
 				{
 					Battack.Dtimer = 10f;
