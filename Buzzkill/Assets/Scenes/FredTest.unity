@@ -1003,6 +1003,21 @@ Prefab:
       value: 
       objectReference: {fileID: 243564405993641622, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
         type: 2}
+    - target: {fileID: 82121354965089996, guid: 4a68d6835eb1e4e4cba0ff19058ab9a5,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 559fa8b8a8ecf8b429cca0ebae234108, type: 3}
+    - target: {fileID: 114359635577641332, guid: 4a68d6835eb1e4e4cba0ff19058ab9a5,
+        type: 2}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bf0f9ba89e43396469755b8ddc4e69f0, type: 3}
+    - target: {fileID: 82121354965089996, guid: 4a68d6835eb1e4e4cba0ff19058ab9a5,
+        type: 2}
+      propertyPath: Priority
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a68d6835eb1e4e4cba0ff19058ab9a5, type: 2}
   m_IsPrefabParent: 0

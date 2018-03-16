@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim:
-  - {fileID: 21300000, guid: a0c985e4d4a10de4280d26342ef175c2, type: 3}
-  - {fileID: 21300000, guid: 51cd1a7644130454ea64ff9bcbb14501, type: 3}
-  - {fileID: 21300000, guid: 2e6036de0e2cf834090e6b83b0ebdc04, type: 3}
+  - {fileID: 21300000, guid: 25a16906b35861a42ac3c6a0d095f8e7, type: 3}
+  - {fileID: 21300000, guid: ab15f64ce1b97e24fb1e719c955bb054, type: 3}
+  - {fileID: 21300000, guid: 4093301b7ac4503498eef2a720c13d1b, type: 3}
   speed: 25
 --- !u!212 &212784677304502442
 SpriteRenderer:
@@ -117,7 +117,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3c5ec5998456e0f43addfbbbde77005b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12338cef25335844e8be9888104bc44e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Sound/Sound Effects/Ego/Ego_Collision.wav.meta
+guid: 559fa8b8a8ecf8b429cca0ebae234108
+timeCreated: 1521168318
+=======
 guid: 4730cf284e006a9449ad0a60a863f644
 timeCreated: 1521180792
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Sound/Sound Effects/Ego/Ego_Collision.wav.meta
 licenseType: Free
 AudioImporter:
   externalObjects: {}

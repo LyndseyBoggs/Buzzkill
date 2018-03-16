@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimAnimation: {fileID: 21300000, guid: bdef3d19155bf634d9f5bd70f5269788, type: 3}
+  aimAnimation: {fileID: 21300000, guid: bdccef5f333a56e4d935a044bbadcce8, type: 3}
   aggroRange: 0
   speed: 10
   throwRange: 75
@@ -88,7 +88,7 @@ MonoBehaviour:
   coinMin: 1
   coinMax: 5
   coinValue: 0
-  deadAnimation: {fileID: 21300000, guid: bdef3d19155bf634d9f5bd70f5269788, type: 3}
+  deadAnimation: {fileID: 21300000, guid: bdccef5f333a56e4d935a044bbadcce8, type: 3}
 --- !u!114 &114560398528715562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bdef3d19155bf634d9f5bd70f5269788, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdccef5f333a56e4d935a044bbadcce8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
