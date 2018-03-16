@@ -8,6 +8,12 @@ public class MenuManager : MonoBehaviour {
 	public GameObject pauseMenu;
 	public GameObject pauseButton;
 
+	public GameObject canvas;
+	public GameObject optionsMenu;
+	public GameObject audioControlsMenu;
+	public GameObject soundTracksMenu;
+	public GameObject aestheticsMenu;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -39,6 +45,54 @@ public class MenuManager : MonoBehaviour {
 		GameManager.instance.Pause ();
 		pauseMenu.SetActive (!pauseMenu.activeSelf);
 		pauseButton.SetActive (!pauseButton.activeSelf);
+	}
+
+	public void OptionMenu()
+	{
+		canvas.SetActive(false);
+		optionsMenu.SetActive(true);
+	}
+
+	public void AudioMenu()
+	{
+		optionsMenu.SetActive(false);
+		audioControlsMenu.SetActive(true);
+	}
+
+	public void SoundtrackMenu()
+	{
+		optionsMenu.SetActive(false);
+		soundTracksMenu.SetActive(true);
+	}
+
+	public void AestheticMenu()
+	{
+		optionsMenu.SetActive(false);
+		aestheticsMenu.SetActive(true);
+	}
+
+	public void BackFromOptionMenu()
+	{
+		optionsMenu.SetActive(false);
+		canvas.SetActive(true);
+	}
+
+	public void BackFromAudioMenu()
+	{
+		audioControlsMenu.SetActive(false);
+		optionsMenu.SetActive(true);
+	}
+
+	public void BackFromSoundtrackMenu()
+	{
+		soundTracksMenu.SetActive(false);
+		optionsMenu.SetActive(true);
+	}
+
+	public void BackFromAestheticMenu()
+	{
+		aestheticsMenu.SetActive(false);
+		optionsMenu.SetActive(true);
 	}
 
 	public void Exit(){
