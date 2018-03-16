@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class ThrownObject : MonoBehaviour {
-
+	
+	SpriteRenderer sRend;
+	public Sprite[] anim;
+	int currentFrame;
 	Transform tf;
-	public float speed;
+	public float speed = 25;
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
+		sRend = GetComponent<SpriteRenderer> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+		if (!GameManager.instance.isGameOver) {
+			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+			sRend.sprite = anim [currentFrame];
+			currentFrame++;
+			if (currentFrame >= anim.Length) {
+				currentFrame = 0;
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

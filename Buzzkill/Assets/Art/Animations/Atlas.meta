@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Art/Animations/Atlas.meta
 guid: 29984122cffb7a74abc5f38425996766
 folderAsset: yes
 timeCreated: 1521182146
+=======
+guid: bba91832745d53a44b6a12819220f78c
+folderAsset: yes
+timeCreated: 1521186346
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Art/Animations/Atlas.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

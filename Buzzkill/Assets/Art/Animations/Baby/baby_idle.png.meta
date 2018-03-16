@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Art/Animations/Baby/baby_idle.png.meta
 guid: 3bcb231f6ea2d244bb4f67402bba50ef
 timeCreated: 1521174590
+=======
+guid: cf02845742c0854439e81f84c9741bda
+timeCreated: 1521180768
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Art/Animations/Baby/baby_idle.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3f1fc83b6dcd202439e01558c93d684e
 folderAsset: yes
 timeCreated: 1521181407
+=======
+guid: 61e9a82c620f66349937bd547137b775
+folderAsset: yes
+timeCreated: 1521180627
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

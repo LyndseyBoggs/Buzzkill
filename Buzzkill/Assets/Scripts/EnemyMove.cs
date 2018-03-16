@@ -15,8 +15,8 @@ public class EnemyMove : MonoBehaviour {
 	private bool thrown;
 	[HideInInspector]
 	public bool isDead;
-	public int coinMin;
-	public int coinMax;
+	public int coinMin = 1;
+	public int coinMax = 5;
 	public int coinValue;
 	public Sprite deadAnimation;
 	// Use this for initialization

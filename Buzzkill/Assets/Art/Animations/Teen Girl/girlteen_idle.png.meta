@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Art/Animations/Teen Girl/girlteen_idle.png.meta
 guid: cd3e046220b408c479f19dc8f77938f2
 timeCreated: 1521174606
+=======
+guid: fa951002c5d56c7429eaab38aead3a00
+timeCreated: 1521180785
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Art/Animations/Teen Girl/girlteen_idle.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

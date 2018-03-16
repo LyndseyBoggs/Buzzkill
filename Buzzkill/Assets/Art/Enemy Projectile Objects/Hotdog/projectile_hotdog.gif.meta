@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Art/Enemy Projectile Objects/Hotdog/projectile_hotdog.gif.meta
 guid: eab3c8800acb51b4cbeafd47cfe8bca4
 timeCreated: 1521181522
+=======
+guid: 3947e06c18478844fbccb1d3a79b25af
+timeCreated: 1521180668
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Art/Enemy Projectile Objects/Hotdog/projectile_hotdog.gif.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

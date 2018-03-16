@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Buzzkill/Assets/Art/Animations/Teen Boy/boyteen_idle.png.meta
 guid: 14426f88749fd2b4f87695fad305aef9
 timeCreated: 1521174584
+=======
+guid: 5a79a83736df825458504f081001c834
+timeCreated: 1521180681
+>>>>>>> d98c9e39d744885cb169093e83d9965974076b62:Buzzkill/Assets/Art/Animations/Teen Boy/boyteen_idle.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

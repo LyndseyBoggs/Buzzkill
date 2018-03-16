@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 76e11f9dba0783d4da987331bc2a743c
   - enabled: 1
-    path: Assets/Scenes/KeffnySceneTest.unity
-    guid: 71230819d7fcd2a44a177b89d740a52e
+    path: Assets/Scenes/FredTest.unity
+    guid: fd6dce28ddcaaeb47bbfa9e6f8fe2d0b
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 68fb8c6b0a251c849bb5e67e41c77c95
