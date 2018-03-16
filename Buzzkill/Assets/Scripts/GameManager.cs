@@ -92,20 +92,20 @@ public class GameManager : MonoBehaviour {
 		{
 			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
 		}
-		if(!tDistnace)
+		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
 		}
 		if(!gTimer)
 		{
 			gTimer = GameObject.FindGameObjectWithTag("TimerText").GetComponent<Text>();
-		}
+		}*/
 		coinText.text = "Banked Coins: " + totalCoins;
 		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
-		tDistnace.text = "Travel distance: " + distance;
+		//tDistnace.text = "Travel distance: " + distance;
 		gameTimer += Time.deltaTime;
-		gTimer.text = "Timer: " + Mathf.Round(gameTimer);
+		//gTimer.text = "Timer: " + Mathf.Round(gameTimer);
 		//finalScore = gameTimer + distance + score + coins + BeeAttack_Melee.killedEnemies / 4 *.25;
 	}
 
