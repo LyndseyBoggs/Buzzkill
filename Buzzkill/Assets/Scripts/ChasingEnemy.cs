@@ -14,6 +14,10 @@ public class ChasingEnemy : MonoBehaviour {
 	public float speed;
 	bool isChasing;
 	public float chaseTime;
+	private AudioSource audSource;
+	public AudioClip seldomBark;
+	public AudioClip oftenBark;
+	public bool clipPlaying;
 
 	SpriteRenderer sRend;
 	public Sprite eating;
@@ -24,6 +28,7 @@ public class ChasingEnemy : MonoBehaviour {
 	void Start () {
 		tf = GetComponent<Transform> ();
 		sRend = GetComponent<SpriteRenderer>();
+		audSource = GetComponent<AudioSource> ();
 		//player = GameObject.FindObjectOfType<BeeMovement> ();
 	}
 	
@@ -34,11 +39,21 @@ public class ChasingEnemy : MonoBehaviour {
 		if (currentState == States.idle) {
 			offset = idleOffset;
 			isChasing = false;
+			audSource.clip = seldomBark;
+			if (!clipPlaying) {
+				audSource.Play ();
+				clipPlaying = true;
+			}
 		} else if (currentState == States.chasing) {
 			offset = chasingOffset;
 			if (!isChasing) {
 				StartCoroutine (ChasingTimer ());
 				isChasing = true;
+				audSource.clip = oftenBark;
+				if (!clipPlaying) {
+					audSource.Play ();
+					clipPlaying = true;
+				}
 			}
 		} else if (currentState == States.killing) {
 			gameOver += Time.deltaTime;
@@ -64,5 +79,6 @@ public class ChasingEnemy : MonoBehaviour {
 			yield return new WaitForSeconds (.5f);
 		}
 		currentState = States.idle;
+		clipPlaying = false;
 	}
 }

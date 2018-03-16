@@ -20,6 +20,8 @@ public class BeeMovement : MonoBehaviour {
 	public bool hasShield;
 	public SpriteRenderer sRend;
 	public GameObject shieldSprite;
+	public AudioClip deathSound;
+	private AudioSource audSource;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,7 @@ public class BeeMovement : MonoBehaviour {
 		enemyChasing = GameObject.FindObjectOfType<ChasingEnemy> ();
 		sRend = GetComponent<SpriteRenderer> ();
 		startPos = tf.position;
+		audSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -79,11 +82,15 @@ public class BeeMovement : MonoBehaviour {
 	}
 
 	public void Hit(){
+		audSource.Play ();
 		if (!hasShield) {
 			if (enemyChasing.currentState == ChasingEnemy.States.idle) {
 				enemyChasing.currentState = ChasingEnemy.States.chasing;
+				enemyChasing.clipPlaying = false;
 			} else if (enemyChasing.currentState == ChasingEnemy.States.chasing) {
 				enemyChasing.currentState = ChasingEnemy.States.killing;
+				audSource.clip = deathSound;
+				audSource.Play ();
 			}
 		} else {
 			hasShield = false;
