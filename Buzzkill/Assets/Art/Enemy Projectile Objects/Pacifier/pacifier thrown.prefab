@@ -79,12 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim:
-  - {fileID: 21300000, guid: beb9725484b347f4e8dcb78a8ea11c50, type: 3}
-  - {fileID: 21300000, guid: 9b45b15a5178f1646bc907b8087f2189, type: 3}
-  - {fileID: 21300000, guid: 0b017343b14364c47ad7ed1a3243c7a1, type: 3}
-  - {fileID: 21300000, guid: 88605e3fe088a034a8f1a29cddda6061, type: 3}
-  - {fileID: 21300000, guid: f696e519f321cdd4ab3df603d8245ece, type: 3}
-  - {fileID: 21300000, guid: 0c3e73e6f3ceefc4aa8da2e28aed0290, type: 3}
+  - {fileID: 21300000, guid: 50c3fc1e704463947b5f9e4bdc96edfa, type: 3}
+  - {fileID: 21300000, guid: ac6d9ebd8b6e2e64ab7d82a93b1cae44, type: 3}
+  - {fileID: 21300000, guid: 69ab5e9e321abed4ab5409a1a2225f3d, type: 3}
+  - {fileID: 21300000, guid: f97012b3f8bf69945847db82a12ed94e, type: 3}
+  - {fileID: 21300000, guid: 94927ac5ae733304bbf406057ec9ade5, type: 3}
+  - {fileID: 21300000, guid: a228f4d263ba635478767f02416cfaed, type: 3}
   speed: 25
 --- !u!212 &212289107181521268
 SpriteRenderer:
@@ -120,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a23a04eb94673549b7d74f8d69e3df0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45dba1fc621ebbf44aace3bdb096ad8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
