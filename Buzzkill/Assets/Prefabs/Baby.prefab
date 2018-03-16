@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1340294673518470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -118.874954, y: 61.646786, z: -143.22563}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,8 +59,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8, y: 5.64}
-    newSize: {x: 3.8, y: 5.64}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -79,11 +79,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimAnimation: {fileID: 21300000, guid: 932758264a55f53458b7ee60a0b3b4d6, type: 3}
+  aimAnimation: {fileID: 21300000, guid: 23fbdf9529aaa0d4aada4abb8453ba11, type: 3}
   aggroRange: 100
   speed: 10
   throwRange: 75
-  objToThrow: {fileID: 1044273047209682, guid: a932b47cb28cf1649a51d83db1f44f42, type: 2}
+  objToThrow: {fileID: 1486804125141710, guid: 0301658abcc45e145972dfe3073d4874, type: 2}
   isDead: 0
   coinMin: 1
   coinMax: 5
@@ -137,12 +137,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9d8f837959b54e4295d0cdbce3b96d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23fbdf9529aaa0d4aada4abb8453ba11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.8, y: 5.64}
+  m_Size: {x: 21, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

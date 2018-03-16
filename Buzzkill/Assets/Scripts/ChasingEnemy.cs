@@ -43,15 +43,17 @@ public class ChasingEnemy : MonoBehaviour {
 		} else if (currentState == States.killing) {
 			gameOver += Time.deltaTime;
 			offset = new Vector3 (0, 0, 0);
-			sRend.sprite = eating;
+			//sRend.sprite = eating;
 			StopAllCoroutines ();
+			GameManager.instance.worldSpeed = 0;
+			GameManager.instance.isGameOver = true;
 			if(gameOver >= deathTimer)
 			{
 				GameManager.instance.GameOver ();
 			}
 			//GameManager.instance.GameOver ();
 		}
-		tf.position += vecToGoal * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+		tf.position += vecToGoal * Time.deltaTime * speed; //* GameManager.instance.worldSpeed;
 
 	}
 
