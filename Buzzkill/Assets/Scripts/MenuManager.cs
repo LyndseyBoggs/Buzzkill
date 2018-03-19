@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : MonoBehaviour
+{
+	public AudioMixer masterControl;
 
 	public GameObject pauseMenu;
 	public GameObject pauseButton;
@@ -13,7 +16,6 @@ public class MenuManager : MonoBehaviour {
 	public Slider musicVolume;
 	public Slider effectsVolume;
 
-	//public float startVolume = 10f;
 	public float masterCurrentVolume;
 	public float musicCurrentVolume;
 	public float effectsCurrentVolume;
@@ -35,9 +37,7 @@ public class MenuManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		//MasterVolumeControl();
-		//MusicVolumeControl();
-		//EffectsVolumeControl();
+		
 	}
 
 	public void StartGame(){
@@ -70,6 +70,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void MasterVolumeControl(float volume1)
 	{
+		masterControl.SetFloat("masterVol", volume1);
 		masterCurrentVolume = volume1;
 		PlayerPrefs.SetFloat(newMasterVolume, volume1);
 		PlayerPrefs.Save();
@@ -77,6 +78,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void MusicVolumeControl(float volume2)
 	{
+		masterControl.SetFloat("musicVol", volume2);
 		musicCurrentVolume = volume2;
 		PlayerPrefs.SetFloat(newMusicVolume, volume2);
 		PlayerPrefs.Save();
@@ -84,6 +86,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void EffectsVolumeControl(float volume3)
 	{
+		masterControl.SetFloat("sfxVol", volume3);
 		effectsCurrentVolume = volume3;
 		PlayerPrefs.SetFloat(newEffectsVolume, volume3);
 		PlayerPrefs.Save();
