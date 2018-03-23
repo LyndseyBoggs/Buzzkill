@@ -8,6 +8,9 @@ public class MenuManager : MonoBehaviour {
 	public GameObject pauseMenu;
 	public GameObject pauseButton;
 
+	public GameObject StartScreenCanvas;
+	public GameObject StartStartCanvas;
+
 	// Use this for initialization
 	void Start () {
 		
