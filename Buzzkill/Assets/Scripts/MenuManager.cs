@@ -23,6 +23,12 @@ public class MenuManager : MonoBehaviour
 	string newMusicVolume = "MUSIC_VOLUME_SLIDER";
 	string newEffectsVolume = "EFFECTS_VOLUME_SLIDER";
 
+	public AudioSource audio;
+	public AudioClip soundtrack1;
+	public AudioClip soundtrack2;
+	public AudioClip soundtrack3;
+	public AudioClip soundtrack4;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,7 +43,10 @@ public class MenuManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
+		if(audio.isPlaying)
+		{
+			Destroy(GameObject.FindWithTag("MainAudio"));
+		}
 	}
 
 	public void StartGame(){
@@ -119,7 +128,43 @@ public class MenuManager : MonoBehaviour
 
 	public void SoundtrackMenu()
 	{
-		SceneManager.LoadScene("");
+		SceneManager.LoadScene("Soundtracks");
+	}
+
+	public void Sountrack1()
+	{
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack1;
+		audio.Stop();
+		audio.Play();
+		DontDestroyOnLoad(audio.gameObject);
+	}
+
+	public void Sountrack2()
+	{
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack2;
+		audio.Stop();
+		audio.Play();
+		DontDestroyOnLoad(audio.gameObject);
+	}
+
+	public void Sountrack3()
+	{
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack3;
+		audio.Stop();
+		audio.Play();
+		DontDestroyOnLoad(audio.gameObject);
+	}
+
+	public void Sountrack4()
+	{
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack4;
+		audio.Stop();
+		audio.Play();
+		DontDestroyOnLoad(audio.gameObject);
 	}
 
 	public void AestheticMenu()

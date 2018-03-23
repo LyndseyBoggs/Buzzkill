@@ -679,15 +679,15 @@ RectTransform:
   m_GameObject: {fileID: 1086342339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 1358968799}
   m_Father: {fileID: 1309479871}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -495, y: 339}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -41}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086342341
@@ -864,8 +864,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c65470358870924382475cf5344b756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterControl: {fileID: 0}
   pauseMenu: {fileID: 0}
   pauseButton: {fileID: 0}
+  masterVolume: {fileID: 0}
+  musicVolume: {fileID: 0}
+  effectsVolume: {fileID: 0}
+  masterCurrentVolume: 0
+  musicCurrentVolume: 0
+  effectsCurrentVolume: 0
 --- !u!4 &1278087074
 Transform:
   m_ObjectHideFlags: 0
@@ -1127,12 +1134,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1278087073}
+        m_MethodName: SoundtrackMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
