@@ -12,6 +12,10 @@ public class MenuManager : MonoBehaviour
 	public GameObject pauseMenu;
 	public GameObject pauseButton;
 
+<<<<<<< HEAD
+	public GameObject StartScreenCanvas;
+	public GameObject StartStartCanvas;
+=======
 	public Slider masterVolume;
 	public Slider musicVolume;
 	public Slider effectsVolume;
@@ -22,6 +26,7 @@ public class MenuManager : MonoBehaviour
 	string newMasterVolume = "MASTER_VOLUME_SLIDER";
 	string newMusicVolume = "MUSIC_VOLUME_SLIDER";
 	string newEffectsVolume = "EFFECTS_VOLUME_SLIDER";
+>>>>>>> a5606eb58782470e93c2f416ac984e86081c1e0e
 
 	public AudioSource audio;
 	public AudioClip soundtrack1;
