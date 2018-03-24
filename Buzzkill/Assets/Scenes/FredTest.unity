@@ -491,6 +491,8 @@ MonoBehaviour:
   masterControl: {fileID: 0}
   pauseMenu: {fileID: 92426521}
   pauseButton: {fileID: 827534272}
+  StartScreenCanvas: {fileID: 0}
+  StartStartCanvas: {fileID: 0}
   masterVolume: {fileID: 0}
   musicVolume: {fileID: 0}
   effectsVolume: {fileID: 0}
@@ -1575,6 +1577,10 @@ Prefab:
       value: 
       objectReference: {fileID: 243564405993641622, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
         type: 2}
+    - target: {fileID: 1079752525566946, guid: bad889829e90237428898dfac4d17e1e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bad889829e90237428898dfac4d17e1e, type: 2}
   m_IsPrefabParent: 0
