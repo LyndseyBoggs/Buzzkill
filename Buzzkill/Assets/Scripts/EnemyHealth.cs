@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour {
 	public int startingHealth = 1; //Enemy Starting health
 	public int currentHealth;
 	public float sinkSpeed = 2.5f;
+	private AudioSource audSource;
 
 
 	//references animator and capsule collider and whether the enemy is dead and whether
@@ -60,12 +61,13 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		//the enemy is dead
 		isDead = true;
-
-		//makes shots pass through
-		capsuleCollider.isTrigger = true;
-
-		//tells animator enemy is dead
-		anim.SetTrigger("Dead");
+		audSource.Play ();
+//
+//		//makes shots pass through
+//		capsuleCollider.isTrigger = true;
+//
+//		//tells animator enemy is dead
+//		anim.SetTrigger("Dead");
 	}
 
 	public void StartSinking ()
