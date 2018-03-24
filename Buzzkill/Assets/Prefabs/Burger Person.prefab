@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114943014482307532}
   - component: {fileID: 61711449370317044}
   - component: {fileID: 82712742900252150}
+  - component: {fileID: 114660214196736862}
   m_Layer: 0
   m_Name: Burger Person
   m_TagString: Untagged
@@ -149,6 +150,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114660214196736862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856712995560626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 0
+  anims: []
 --- !u!114 &114943014482307532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,8 +184,6 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: 36878e2c40ee72640887f792ebf67c19, type: 3}
-  anims:
-  - {fileID: 21300000, guid: 36878e2c40ee72640887f792ebf67c19, type: 3}
 --- !u!212 &212238540281808192
 SpriteRenderer:
   m_ObjectHideFlags: 1

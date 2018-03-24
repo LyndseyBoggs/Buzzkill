@@ -21,9 +21,6 @@ public class EnemyMove : MonoBehaviour {
 	public Sprite deadAnimation;
 	private AudioSource audSource;
 	bool dead;
-	public Sprite[] anims;
-	int animFrame;
-	bool swapFrame;
 
 	// Use this for initialization
 	void Start () {
@@ -41,14 +38,7 @@ public class EnemyMove : MonoBehaviour {
 		}
 		if (!isDead) {
 			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
-			sRend.sprite = anims [animFrame];
-			if (swapFrame) {
-				animFrame++;
-			}
-			if (animFrame >= anims.Length) {
-				animFrame = 0;
-			}
-			swapFrame = !swapFrame;
+
 		} else {
 			//sRend.sprite = deadAnimation;
 			tf.position -= tf.up;

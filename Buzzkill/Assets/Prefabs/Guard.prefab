@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114352639491154958}
   - component: {fileID: 61188400391656490}
   - component: {fileID: 82694053502246762}
+  - component: {fileID: 114550212946585372}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -170,8 +171,19 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: da316071cbfb3a341b0a7d13a2b3e325, type: 3}
-  anims:
-  - {fileID: 21300000, guid: da316071cbfb3a341b0a7d13a2b3e325, type: 3}
+--- !u!114 &114550212946585372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908907306599992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 0
+  anims: []
 --- !u!212 &212453028310264968
 SpriteRenderer:
   m_ObjectHideFlags: 1

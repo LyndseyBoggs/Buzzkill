@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61034051628272426}
   - component: {fileID: 114230548339361134}
   - component: {fileID: 82145990256815476}
+  - component: {fileID: 114214754491581918}
   m_Layer: 0
   m_Name: TeenGirl
   m_TagString: Enemy
@@ -149,6 +150,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114214754491581918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124398486716082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
+  - {fileID: 21300000, guid: ccce02fee5eda9f43a4a14923b4683a1, type: 3}
+  - {fileID: 21300000, guid: ebe1244490992cb47a6bd3001053f2fd, type: 3}
+  - {fileID: 21300000, guid: b6a1629ba086e814e82e062b52ce4060, type: 3}
+  - {fileID: 21300000, guid: 4ed3d46c808b6cc43a19d017bbafa89f, type: 3}
 --- !u!114 &114230548339361134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,11 +188,6 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: cd3e046220b408c479f19dc8f77938f2, type: 3}
-  anims:
-  - {fileID: 21300000, guid: ccce02fee5eda9f43a4a14923b4683a1, type: 3}
-  - {fileID: 21300000, guid: ebe1244490992cb47a6bd3001053f2fd, type: 3}
-  - {fileID: 21300000, guid: b6a1629ba086e814e82e062b52ce4060, type: 3}
-  - {fileID: 21300000, guid: 4ed3d46c808b6cc43a19d017bbafa89f, type: 3}
 --- !u!212 &212322689698537570
 SpriteRenderer:
   m_ObjectHideFlags: 1

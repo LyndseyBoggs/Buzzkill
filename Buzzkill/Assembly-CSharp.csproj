@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AddPoints_Keffny.cs" />
      <Compile Include="Assets\Scripts\AIDoge_Keffny.cs" />
+     <Compile Include="Assets\Scripts\AnimChanger.cs" />
      <Compile Include="Assets\Scripts\BackGroundMove.cs" />
      <Compile Include="Assets\Scripts\BackgroundSpawn.cs" />
      <Compile Include="Assets\Scripts\ChasingEnemy.cs" />

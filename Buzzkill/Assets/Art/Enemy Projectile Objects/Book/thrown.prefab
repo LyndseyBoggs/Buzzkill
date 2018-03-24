@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212309732921680530}
   - component: {fileID: 114650042988699392}
   - component: {fileID: 61001026818568996}
+  - component: {fileID: 114974015671865916}
   m_Layer: 0
   m_Name: thrown
   m_TagString: Untagged
@@ -78,7 +79,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
+  speed: 25
+--- !u!114 &114974015671865916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300554676892764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
   - {fileID: 21300000, guid: 0999bfff1e78eb543825d7df6d98889a, type: 3}
   - {fileID: 21300000, guid: 14f22bf914ea0334783f4f4c716687ac, type: 3}
   - {fileID: 21300000, guid: 61c2af1f10f38fe4eb1488068fda1e34, type: 3}
@@ -86,7 +100,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 82398d044f4b05d4fabf36214dd320db, type: 3}
   - {fileID: 21300000, guid: 2267bf6df702e4347ade6d95844f53dc, type: 3}
   - {fileID: 21300000, guid: b0d829428c408424d8a6ebe66fb57456, type: 3}
-  speed: 25
 --- !u!212 &212309732921680530
 SpriteRenderer:
   m_ObjectHideFlags: 1

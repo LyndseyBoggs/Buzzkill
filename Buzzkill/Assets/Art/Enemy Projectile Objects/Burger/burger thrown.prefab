@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212784677304502442}
   - component: {fileID: 61966084671718374}
   - component: {fileID: 114442294455001208}
+  - component: {fileID: 114804572786698440}
   m_Layer: 0
   m_Name: burger thrown
   m_TagString: Untagged
@@ -78,11 +79,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
+  speed: 25
+--- !u!114 &114804572786698440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060556706288466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
   - {fileID: 21300000, guid: 25a16906b35861a42ac3c6a0d095f8e7, type: 3}
   - {fileID: 21300000, guid: ab15f64ce1b97e24fb1e719c955bb054, type: 3}
   - {fileID: 21300000, guid: 4093301b7ac4503498eef2a720c13d1b, type: 3}
-  speed: 25
+  - {fileID: 21300000, guid: 0f65353b15eecee499d1e6a57936a317, type: 3}
 --- !u!212 &212784677304502442
 SpriteRenderer:
   m_ObjectHideFlags: 1
