@@ -11,6 +11,7 @@ TagManager:
   - DistanceText
   - TimerText
   - CurrentCoinText
+  - MainAudio
   layers:
   - Default
   - TransparentFX

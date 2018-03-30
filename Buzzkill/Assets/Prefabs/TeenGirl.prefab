@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212322689698537570}
   - component: {fileID: 61034051628272426}
   - component: {fileID: 114230548339361134}
-  - component: {fileID: 114327388347800088}
+  - component: {fileID: 82145990256815476}
+  - component: {fileID: 114214754491581918}
   m_Layer: 0
   m_Name: TeenGirl
   m_TagString: Enemy
@@ -68,6 +69,104 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 21, y: 15}
   m_EdgeRadius: 0
+--- !u!82 &82145990256815476
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124398486716082}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243564405993641622, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 028c54e62c3ea0d4798115b7bdadb17f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114214754491581918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124398486716082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
+  - {fileID: 21300000, guid: ccce02fee5eda9f43a4a14923b4683a1, type: 3}
+  - {fileID: 21300000, guid: ebe1244490992cb47a6bd3001053f2fd, type: 3}
+  - {fileID: 21300000, guid: b6a1629ba086e814e82e062b52ce4060, type: 3}
+  - {fileID: 21300000, guid: 4ed3d46c808b6cc43a19d017bbafa89f, type: 3}
 --- !u!114 &114230548339361134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimAnimation: {fileID: 21300000, guid: cd3e046220b408c479f19dc8f77938f2, type: 3}
+  aimAnimation: {fileID: 21300000, guid: ccce02fee5eda9f43a4a14923b4683a1, type: 3}
   aggroRange: 100
   speed: 10
   throwRange: 75
@@ -89,20 +188,6 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: cd3e046220b408c479f19dc8f77938f2, type: 3}
---- !u!114 &114327388347800088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1124398486716082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1927a960afb49e4690afd4093ef6330, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 1
-  currentHealth: 1
-  sinkSpeed: 2.5
 --- !u!212 &212322689698537570
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -137,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cd3e046220b408c479f19dc8f77938f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa0e975471407e9468a47b9e2495b58c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

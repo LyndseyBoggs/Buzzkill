@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212289107181521268}
   - component: {fileID: 114672764095537438}
   - component: {fileID: 61653560698522176}
+  - component: {fileID: 114584148421401030}
   m_Layer: 0
   m_Name: pacifier thrown
   m_TagString: Untagged
@@ -67,6 +68,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &114584148421401030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1486804125141710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
+  - {fileID: 21300000, guid: 50c3fc1e704463947b5f9e4bdc96edfa, type: 3}
+  - {fileID: 21300000, guid: ac6d9ebd8b6e2e64ab7d82a93b1cae44, type: 3}
+  - {fileID: 21300000, guid: 69ab5e9e321abed4ab5409a1a2225f3d, type: 3}
+  - {fileID: 21300000, guid: f97012b3f8bf69945847db82a12ed94e, type: 3}
+  - {fileID: 21300000, guid: 94927ac5ae733304bbf406057ec9ade5, type: 3}
+  - {fileID: 21300000, guid: a228f4d263ba635478767f02416cfaed, type: 3}
 --- !u!114 &114672764095537438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,13 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
-  - {fileID: 21300000, guid: 50c3fc1e704463947b5f9e4bdc96edfa, type: 3}
-  - {fileID: 21300000, guid: ac6d9ebd8b6e2e64ab7d82a93b1cae44, type: 3}
-  - {fileID: 21300000, guid: 69ab5e9e321abed4ab5409a1a2225f3d, type: 3}
-  - {fileID: 21300000, guid: f97012b3f8bf69945847db82a12ed94e, type: 3}
-  - {fileID: 21300000, guid: 94927ac5ae733304bbf406057ec9ade5, type: 3}
-  - {fileID: 21300000, guid: a228f4d263ba635478767f02416cfaed, type: 3}
   speed: 25
 --- !u!212 &212289107181521268
 SpriteRenderer:

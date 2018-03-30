@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212705819443287168}
   - component: {fileID: 114559703602509202}
   - component: {fileID: 61990885600303782}
+  - component: {fileID: 114684648393654716}
   m_Layer: 0
   m_Name: yoyo thrown
   m_TagString: Untagged
@@ -78,12 +79,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
+  speed: 25
+--- !u!114 &114684648393654716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1988844226856732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
   - {fileID: 21300000, guid: cfe438922af1bdd469fac39854c15716, type: 3}
   - {fileID: 21300000, guid: c056239e497a4eb428371a4af3929ee8, type: 3}
   - {fileID: 21300000, guid: a52ab42eba57d9d4daf0175b4fe0beec, type: 3}
   - {fileID: 21300000, guid: 3a8e56be5f721ff4d9d910e630d51278, type: 3}
-  speed: 25
+  - {fileID: 21300000, guid: 71b1972fffc49cd46a7f8f1efb9282ec, type: 3}
 --- !u!212 &212705819443287168
 SpriteRenderer:
   m_ObjectHideFlags: 1

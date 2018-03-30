@@ -19,12 +19,16 @@ public class EnemyMove : MonoBehaviour {
 	public int coinMax = 5;
 	public int coinValue;
 	public Sprite deadAnimation;
+	private AudioSource audSource;
+	bool dead;
+
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
 		player = GameObject.FindObjectOfType<BeeMovement> ();
 		coinValue = Random.Range (coinMin, coinMax);
 		sRend = GetComponent<SpriteRenderer> ();
+		audSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -34,10 +38,13 @@ public class EnemyMove : MonoBehaviour {
 		}
 		if (!isDead) {
 			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+
 		} else {
 			//sRend.sprite = deadAnimation;
-			speed = 10;
 			tf.position -= tf.up;
+			if (!dead) {
+				Die ();
+			}
 		}
 		if (!thrown) {
 			if ((player.transform.position.x - tf.position.x) < aggroRange) {
@@ -53,5 +60,12 @@ public class EnemyMove : MonoBehaviour {
 	void ThrowObj(){
 		Instantiate (objToThrow, transform.position, transform.rotation);
 		thrown = true;
+	}
+
+	void Die(){
+		speed = 10;
+		audSource.Play ();
+		dead = true;
+		//sRend.sprite = deadAnimation;
 	}
 }

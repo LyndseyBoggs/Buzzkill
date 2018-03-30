@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212968095208364134}
   - component: {fileID: 61873731274460842}
   - component: {fileID: 114496259200170228}
+  - component: {fileID: 114885621444364328}
   m_Layer: 0
   m_Name: lip stick thrown animation
   m_TagString: Untagged
@@ -78,7 +79,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
+  speed: 25
+--- !u!114 &114885621444364328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240672646739848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 1
+  anims:
   - {fileID: 21300000, guid: c1f3a484971040245924cf37b48fc266, type: 3}
   - {fileID: 21300000, guid: dfd0cdce17bdd064881f99c04c38ad1e, type: 3}
   - {fileID: 21300000, guid: 6fa68a8a35cc02d489c4706d183a865d, type: 3}
@@ -96,7 +110,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: efa24c6fe7fb422488516e70870273e8, type: 3}
   - {fileID: 21300000, guid: 65dc533bb23c7a443abe441f46c77b41, type: 3}
   - {fileID: 21300000, guid: 2703b6e739cf1c74bb10037e169fb941, type: 3}
-  speed: 25
 --- !u!212 &212968095208364134
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212477994223670066}
   - component: {fileID: 61104203084299898}
   - component: {fileID: 114282099159408858}
+  - component: {fileID: 114688918066473196}
   m_Layer: 0
   m_Name: coffee thrown
   m_TagString: Untagged
@@ -78,7 +79,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
+  speed: 25
+--- !u!114 &114688918066473196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826956851089622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 1
+  anims:
   - {fileID: 21300000, guid: 0bb1a1b50261ab74f8596fdb8181f9a6, type: 3}
   - {fileID: 21300000, guid: 4793500cd870f1d4ca9b6883100e8f10, type: 3}
   - {fileID: 21300000, guid: 462874c245308d84a828dde75f5e7f83, type: 3}
@@ -97,7 +111,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b984a1c5c2212764298a0c65e815cb3e, type: 3}
   - {fileID: 21300000, guid: 0fe421a9262eb1d409874b63fc243296, type: 3}
   - {fileID: 21300000, guid: baa7c12fe4ffff7498bf64bca64fc5c4, type: 3}
-  speed: 25
 --- !u!212 &212477994223670066
 SpriteRenderer:
   m_ObjectHideFlags: 1
