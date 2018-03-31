@@ -84,9 +84,9 @@ public class GameManager : MonoBehaviour {
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 		}
-		if (!menuManager) {
-			menuManager = GameObject.FindObjectOfType<MenuManager> ();
-		}
+//		if (!menuManager) {
+//			menuManager = GameObject.FindObjectOfType<MenuManager> ();
+//		}
 
 		if(!coinsText)
 		{
