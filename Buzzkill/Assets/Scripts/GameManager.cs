@@ -89,10 +89,6 @@ public class GameManager : MonoBehaviour {
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
-		if(!doge)
-		{
-			doge = GameObject.FindObjectOfType<ChasingEnemy>();
-		}
 
 		if(!coinsText)
 		{

@@ -1215,12 +1215,20 @@ MonoBehaviour:
   masterControl: {fileID: 24100000, guid: c238ec66861b5ff4c8b24bf1c10fabc8, type: 2}
   pauseMenu: {fileID: 0}
   pauseButton: {fileID: 0}
+  continueScreen: {fileID: 0}
+  StartScreenCanvas: {fileID: 0}
+  StartStartCanvas: {fileID: 0}
   masterVolume: {fileID: 1232597753}
   musicVolume: {fileID: 1160026569}
   effectsVolume: {fileID: 87306860}
   masterCurrentVolume: 0
   musicCurrentVolume: 0
   effectsCurrentVolume: 0
+  audio: {fileID: 0}
+  soundtrack1: {fileID: 0}
+  soundtrack2: {fileID: 0}
+  soundtrack3: {fileID: 0}
+  soundtrack4: {fileID: 0}
 --- !u!4 &1100090525
 Transform:
   m_ObjectHideFlags: 0
@@ -2037,7 +2045,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1100090524}
-        m_MethodName: BackToOptionMenu
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2171,7 +2179,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661359975}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243361543627370692, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
     type: 2}
@@ -2252,7 +2260,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661359975}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243564405993641622, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
     type: 2}

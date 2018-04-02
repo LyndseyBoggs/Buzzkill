@@ -18,14 +18,14 @@ public class MenuManager : MonoBehaviour
 	public GameObject StartScreenCanvas;
 	public GameObject StartStartCanvas;
 
-	public Slider masterVolume;
+	//public Slider masterVolume;
 	public Slider musicVolume;
 	public Slider effectsVolume;
 
-	public float masterCurrentVolume;
+	//public float masterCurrentVolume;
 	public float musicCurrentVolume;
 	public float effectsCurrentVolume;
-	string newMasterVolume = "MASTER_VOLUME_SLIDER";
+	//string newMasterVolume = "MASTER_VOLUME_SLIDER";
 	string newMusicVolume = "MUSIC_VOLUME_SLIDER";
 	string newEffectsVolume = "EFFECTS_VOLUME_SLIDER";
 
@@ -39,10 +39,10 @@ public class MenuManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		masterVolume.value = PlayerPrefs.GetFloat(newMasterVolume, 10);
+		//masterVolume.value = PlayerPrefs.GetFloat(newMasterVolume, 10);
 		musicVolume.value = PlayerPrefs.GetFloat(newMusicVolume, 10);
 		effectsVolume.value = PlayerPrefs.GetFloat(newEffectsVolume, 10);
-		masterCurrentVolume = masterVolume.value;
+		//masterCurrentVolume = masterVolume.value;
 		musicCurrentVolume = musicVolume.value;
 		effectsCurrentVolume = effectsVolume.value;
 	}
@@ -58,6 +58,7 @@ public class MenuManager : MonoBehaviour
 
 	public void StartGame(){
 		SceneManager.LoadScene (1);
+		audio.Play();
 		GameManager.instance.isGameOver = false;
 		GameManager.instance.score = 0;
 		GameManager.instance.worldSpeed = 1;
@@ -72,25 +73,16 @@ public class MenuManager : MonoBehaviour
 	public void MainMenu(){
 		GameManager.instance.isGameOver = false;
 		SceneManager.LoadScene (0);
+		Destroy(GameObject.Find("MenuManager"));
 	}
 
-	public void OptionMenu()
-	{
-		SceneManager.LoadScene("Options");
-	}
-
-	public void AudioMenu()
-	{
-		SceneManager.LoadScene("Audio");
-	}
-
-	public void MasterVolumeControl(float volume1)
+	/*public void MasterVolumeControl(float volume1)
 	{
 		masterControl.SetFloat("masterVol", volume1);
 		masterCurrentVolume = volume1;
 		PlayerPrefs.SetFloat(newMasterVolume, volume1);
 		PlayerPrefs.Save();
-	}
+	}*/
 
 	public void MusicVolumeControl(float volume2)
 	{
@@ -110,17 +102,17 @@ public class MenuManager : MonoBehaviour
 
 	void OnEnable()
 	{
-		masterVolume.onValueChanged.AddListener(delegate{SliderCalled(masterVolume);});
+		//masterVolume.onValueChanged.AddListener(delegate{SliderCalled(masterVolume);});
 		musicVolume.onValueChanged.AddListener(delegate{SliderCalled(musicVolume);});
 		effectsVolume.onValueChanged.AddListener(delegate{SliderCalled(effectsVolume);});
 	}
 
 	void SliderCalled(Slider sliderMoved)
 	{
-		if(sliderMoved == masterVolume)
+		/*if(sliderMoved == masterVolume)
 		{
 			MasterVolumeControl(sliderMoved.value);
-		}
+		}*/
 
 		if(sliderMoved == musicVolume)
 		{
@@ -131,11 +123,6 @@ public class MenuManager : MonoBehaviour
 		{
 			EffectsVolumeControl(sliderMoved.value);
 		}
-	}
-
-	public void SoundtrackMenu()
-	{
-		SceneManager.LoadScene("Soundtracks");
 	}
 
 	public void Sountrack1()
@@ -174,19 +161,28 @@ public class MenuManager : MonoBehaviour
 		DontDestroyOnLoad(audio.gameObject);
 	}
 
-	public void AestheticMenu()
+	public void ShopSountrack1()
 	{
-		SceneManager.LoadScene("Aesthetics");
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack1;
+		audio.Stop();
+		audio.Play();
 	}
 
-	public void BackFromOptionMenu()
+	public void ShopSountrack2()
 	{
-		SceneManager.LoadScene("StartScreen");
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack2;
+		audio.Stop();
+		audio.Play();
 	}
 
-	public void BackToOptionMenu()
+	public void ShopSountrack3()
 	{
-		SceneManager.LoadScene("Options");
+		audio = GetComponent<AudioSource>();
+		audio.clip = soundtrack3;
+		audio.Stop();
+		audio.Play();
 	}
 		
 	public void Pause(){

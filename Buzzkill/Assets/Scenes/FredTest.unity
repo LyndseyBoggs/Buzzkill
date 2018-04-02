@@ -494,10 +494,8 @@ MonoBehaviour:
   continueScreen: {fileID: 1606038511}
   StartScreenCanvas: {fileID: 0}
   StartStartCanvas: {fileID: 0}
-  masterVolume: {fileID: 0}
   musicVolume: {fileID: 0}
   effectsVolume: {fileID: 0}
-  masterCurrentVolume: 0
   musicCurrentVolume: 0
   effectsCurrentVolume: 0
   audio: {fileID: 0}
@@ -1537,7 +1535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 975369482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -206.5, y: 13.9, z: -3.4}
+  m_LocalPosition: {x: -206.5, y: 13, z: -3.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2818,8 +2816,6 @@ MonoBehaviour:
   gTimer: {fileID: 0}
   tempWorldSpeed: 0.1
   pLives: 1
-  continueGame: 0
-  stopPlaying: 0
 --- !u!4 &1660252276
 Transform:
   m_ObjectHideFlags: 0
