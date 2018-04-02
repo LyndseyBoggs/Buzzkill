@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public int totalCoins;
 	public Text coinText;
 	public MenuManager menuManager;
+	public ChasingEnemy doge;
 
 	//public float finalScore;
 	public float coins;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour {
 	public float gameTimer;
 	public Text gTimer;
 	public float tempWorldSpeed = .1f;
+	public int pLives;
 
 	// Use this for initialization
 	void Start () {
@@ -87,6 +89,10 @@ public class GameManager : MonoBehaviour {
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
+		if(!doge)
+		{
+			doge = GameObject.FindObjectOfType<ChasingEnemy>();
+		}
 
 		if(!coinsText)
 		{
@@ -100,6 +106,18 @@ public class GameManager : MonoBehaviour {
 		{
 			gTimer = GameObject.FindGameObjectWithTag("TimerText").GetComponent<Text>();
 		}*/
+		/*if(continueGame)
+		{
+			Time.timeScale = 0;
+		}
+		else
+		{
+			Time.timeScale = 1;
+		}
+		if(continueGame)
+		{
+			return;
+		}*/
 		coinText.text = "Banked Coins: " + totalCoins;
 		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
@@ -107,6 +125,44 @@ public class GameManager : MonoBehaviour {
 		gameTimer += Time.deltaTime;
 		//gTimer.text = "Timer: " + Mathf.Round(gameTimer);
 		//finalScore = gameTimer + distance + score + coins + BeeAttack_Melee.killedEnemies / 4 *.25;
+
+		if(Input.GetKeyDown(KeyCode.Z))
+		{
+			menuManager.ContinueScreen();
+		}
+	}
+
+	public void ContinueGame()
+	{
+		menuManager.ContinueScreen();
+	}
+
+	public void ContinueYes()
+	{
+		if(pLives > 0)
+		{
+			pLives -= 1;
+			isGameOver = false;
+			worldSpeed = 1;
+			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+			foreach(GameObject enemy in enemies)
+				GameObject.Destroy(enemy);
+			GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+			foreach(GameObject projectile in projectiles)
+				GameObject.Destroy(projectile);
+			doge.currentState = ChasingEnemy.States.idle;
+			menuManager.ContinueScreen();
+		}
+
+		if(pLives == 0 && isGameOver == true)
+		{
+			GameOver();
+		}
+	}
+
+	public void ContinueNo()
+	{
+		GameOver();
 	}
 
 	public void GameOver(){

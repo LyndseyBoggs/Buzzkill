@@ -12,6 +12,8 @@ public class MenuManager : MonoBehaviour
 	public GameObject pauseMenu;
 	public GameObject pauseButton;
 
+	public GameObject continueScreen;
+
 
 	public GameObject StartScreenCanvas;
 	public GameObject StartStartCanvas;
@@ -191,6 +193,12 @@ public class MenuManager : MonoBehaviour
 		GameManager.instance.Pause ();
 		pauseMenu.SetActive (!pauseMenu.activeSelf);
 		pauseButton.SetActive (!pauseButton.activeSelf);
+	}
+
+	public void ContinueScreen()
+	{
+		GameManager.instance.Pause();
+		continueScreen.SetActive(!continueScreen.activeSelf);
 	}
 
 	public void Exit(){
