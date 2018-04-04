@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61142031428217140}
   m_Layer: 0
   m_Name: projectile_hotdog
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,8 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987c326d1e93011488b29ab1e94fbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim:
-  - {fileID: 21300000, guid: eab3c8800acb51b4cbeafd47cfe8bca4, type: 3}
   speed: 25
 --- !u!212 &212994164524540694
 SpriteRenderer:
