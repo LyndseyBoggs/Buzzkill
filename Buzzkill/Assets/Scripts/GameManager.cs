@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("HighScore", highScore);
 			PlayerPrefs.Save ();
 		}
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene ("GameOver");
 	}
 
 	public void Pause(){
