@@ -64,7 +64,9 @@ public class ChasingEnemy : MonoBehaviour {
 			GameManager.instance.isGameOver = true;
 			if(gameOver >= deathTimer)
 			{
-				GameManager.instance.GameOver ();
+				gameOver = 0f;
+				GameManager.instance.ContinueGame();
+				//GameManager.instance.GameOver ();
 			}
 			//GameManager.instance.GameOver ();
 		}

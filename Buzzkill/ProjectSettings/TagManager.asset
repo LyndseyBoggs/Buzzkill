@@ -12,6 +12,7 @@ TagManager:
   - TimerText
   - CurrentCoinText
   - MainAudio
+  - Projectile
   layers:
   - Default
   - TransparentFX
