@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour {
 	private int spawnChance;
 	Transform tf;
 	public float timeToWait;
+	int NUM = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -37,9 +38,13 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	private void spawnChunk(){
-		int randoNum = Random.Range (0, objsPossible.Length);
-		objToSpawn = objsPossible [randoNum].gameObject;
+		//int randoNum = Random.Range (0, objsPossible.Length);
+		objToSpawn = objsPossible [NUM].gameObject;
 		spawnedObj = Instantiate (objToSpawn, tf.position, tf.rotation);
+		NUM++;
+		if (NUM >= objsPossible.Length) {
+			NUM = 0;
+		}
 		StartCoroutine (WaitForChunk ());
 	}
 	IEnumerator WaitForChunk(){

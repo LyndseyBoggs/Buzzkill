@@ -172,6 +172,7 @@
      <Compile Include="Assets\Scripts\GameOverUI_Keffny.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
+     <Compile Include="Assets\Scripts\MovingWalkways.cs" />
      <Compile Include="Assets\Scripts\Player\BeeAttack_Melee.cs" />
      <Compile Include="Assets\Scripts\Player\BeeMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
