@@ -57,8 +57,7 @@ public class MenuManager : MonoBehaviour
 	}
 
 	public void StartGame(){
-		SceneManager.LoadScene (1);
-		audio.Play();
+		SceneManager.LoadScene ("FredTest");
 		GameManager.instance.isGameOver = false;
 		GameManager.instance.score = 0;
 		GameManager.instance.worldSpeed = 1;
@@ -68,11 +67,12 @@ public class MenuManager : MonoBehaviour
 		GameManager.instance.coins = 0;
 		BeeAttack_Melee.killedEnemies = 0;
 		GameManager.instance.isPaused = false;
+		audio.Play();
 	}
 
 	public void MainMenu(){
 		GameManager.instance.isGameOver = false;
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene ("StartScreen");
 		Destroy(GameObject.Find("MenuManager"));
 	}
 
