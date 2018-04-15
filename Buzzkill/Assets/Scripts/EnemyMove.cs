@@ -57,8 +57,23 @@ public class EnemyMove : MonoBehaviour {
 	}
 		
 
-	void ThrowObj(){
-		Instantiate (objToThrow, transform.position, transform.rotation);
+	void ThrowObj()
+	{
+		float xDistance;
+		xDistance = player.tf.position.x - tf.position.x;
+		float yDistance;
+		yDistance = player.tf.position.y - tf.position.y;
+		float throwAngle;
+		throwAngle = Mathf.Atan(yDistance + 4.905f) / xDistance;
+		float totalVelocity = xDistance / Mathf.Cos(throwAngle);
+		float xVelocity, yVelocity;
+		xVelocity = totalVelocity * Mathf.Cos(throwAngle);
+		yVelocity = totalVelocity * Mathf.Sin(throwAngle);
+		GameObject bulletInstance = Instantiate(objToThrow, tf.position, Quaternion.Euler(new Vector3(0, 0, 0))) as GameObject;
+		Rigidbody2D rigid;
+		rigid = bulletInstance.GetComponent<Rigidbody2D>();
+		rigid.velocity = new Vector2(xVelocity, 5f);
+		//Instantiate (objToThrow, transform.position, transform.rotation);
 		thrown = true;
 	}
 

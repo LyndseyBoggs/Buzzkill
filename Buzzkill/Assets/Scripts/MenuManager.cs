@@ -31,6 +31,7 @@ public class MenuManager : MonoBehaviour
 
 
 	public AudioSource audio;
+	public AudioSource shopAudio;
 	public AudioClip soundtrack1;
 	public AudioClip soundtrack2;
 	public AudioClip soundtrack3;
@@ -39,9 +40,9 @@ public class MenuManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		//masterVolume.value = PlayerPrefs.GetFloat(newMasterVolume, 10);
-		musicVolume.value = PlayerPrefs.GetFloat(newMusicVolume, 10);
-		effectsVolume.value = PlayerPrefs.GetFloat(newEffectsVolume, 10);
+		//masterVolume.value = PlayerPrefs.GetFloat(newMasterVolume, 0);
+		musicVolume.value = PlayerPrefs.GetFloat(newMusicVolume, 0);
+		effectsVolume.value = PlayerPrefs.GetFloat(newEffectsVolume, 0);
 		//masterCurrentVolume = masterVolume.value;
 		musicCurrentVolume = musicVolume.value;
 		effectsCurrentVolume = effectsVolume.value;
@@ -52,11 +53,15 @@ public class MenuManager : MonoBehaviour
 	{
 		if(audio.isPlaying)
 		{
-			Destroy(GameObject.FindWithTag("MainAudio"));
+			Destroy(GameObject.FindGameObjectWithTag("MainAudio"));
 		}
 	}
 
 	public void StartGame(){
+		if(Application.loadedLevelName == "StartScreen")
+		{
+			audio.Play();
+		}
 		SceneManager.LoadScene ("FredTest");
 		GameManager.instance.isGameOver = false;
 		GameManager.instance.score = 0;
@@ -67,13 +72,13 @@ public class MenuManager : MonoBehaviour
 		GameManager.instance.coins = 0;
 		BeeAttack_Melee.killedEnemies = 0;
 		GameManager.instance.isPaused = false;
-		audio.Play();
 	}
 
-	public void MainMenu(){
+	public void MainMenu()
+	{
+		Destroy(GameObject.Find("MenuManager"));
 		GameManager.instance.isGameOver = false;
 		SceneManager.LoadScene ("StartScreen");
-		Destroy(GameObject.Find("MenuManager"));
 	}
 
 	/*public void MasterVolumeControl(float volume1)
@@ -125,64 +130,57 @@ public class MenuManager : MonoBehaviour
 		}
 	}
 
-	public void Sountrack1()
+	public void Soundtrack1()
 	{
-		audio = GetComponent<AudioSource>();
 		audio.clip = soundtrack1;
 		audio.Stop();
 		audio.Play();
 		DontDestroyOnLoad(audio.gameObject);
 	}
 
-	public void Sountrack2()
+	public void Soundtrack2()
 	{
-		audio = GetComponent<AudioSource>();
 		audio.clip = soundtrack2;
 		audio.Stop();
 		audio.Play();
 		DontDestroyOnLoad(audio.gameObject);
 	}
 
-	public void Sountrack3()
+	public void Soundtrack3()
 	{
-		audio = GetComponent<AudioSource>();
 		audio.clip = soundtrack3;
 		audio.Stop();
 		audio.Play();
 		DontDestroyOnLoad(audio.gameObject);
 	}
 
-	public void Sountrack4()
+	public void Soundtrack4()
 	{
-		audio = GetComponent<AudioSource>();
 		audio.clip = soundtrack4;
 		audio.Stop();
 		audio.Play();
 		DontDestroyOnLoad(audio.gameObject);
 	}
 
-	public void ShopSountrack1()
+	public void ShopSoundtrack1()
 	{
-		audio = GetComponent<AudioSource>();
-		audio.clip = soundtrack1;
-		audio.Stop();
-		audio.Play();
+		shopAudio.clip = soundtrack1;
+		shopAudio.Stop();
+		shopAudio.Play();
 	}
 
-	public void ShopSountrack2()
+	public void ShopSoundtrack2()
 	{
-		audio = GetComponent<AudioSource>();
-		audio.clip = soundtrack2;
-		audio.Stop();
-		audio.Play();
+		shopAudio.clip = soundtrack2;
+		shopAudio.Stop();
+		shopAudio.Play();
 	}
 
-	public void ShopSountrack3()
+	public void ShopSoundtrack3()
 	{
-		audio = GetComponent<AudioSource>();
-		audio.clip = soundtrack3;
-		audio.Stop();
-		audio.Play();
+		shopAudio.clip = soundtrack3;
+		shopAudio.Stop();
+		shopAudio.Play();
 	}
 		
 	public void Pause(){
@@ -200,5 +198,4 @@ public class MenuManager : MonoBehaviour
 	public void Exit(){
 		Application.Quit ();
 	}
-		
 }
