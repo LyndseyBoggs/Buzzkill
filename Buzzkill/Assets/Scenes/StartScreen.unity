@@ -2193,7 +2193,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -3043,7 +3043,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -7974,7 +7974,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: Sountrack2
+        m_MethodName: Soundtrack2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9939,7 +9939,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: Sountrack1
+        m_MethodName: Soundtrack1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10341,12 +10341,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1278087076}
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12588,7 +12588,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -15262,7 +15262,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -17977,7 +17977,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: ShopSountrack1
+        m_MethodName: ShopSoundtrack1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20510,10 +20510,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1278087074}
   - component: {fileID: 1278087073}
+  - component: {fileID: 1278087076}
   - component: {fileID: 1278087075}
   m_Layer: 0
   m_Name: MenuManager
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20539,7 +20540,8 @@ MonoBehaviour:
   effectsVolume: {fileID: 1938385176}
   musicCurrentVolume: 0
   effectsCurrentVolume: 0
-  audio: {fileID: 0}
+  audio: {fileID: 1278087075}
+  shopAudio: {fileID: 1278087076}
   soundtrack1: {fileID: 8300000, guid: 18ad66cd3d564504d9dcf63af22628a2, type: 3}
   soundtrack2: {fileID: 8300000, guid: 845632d5915619e4785c2569bd2943a4, type: 3}
   soundtrack3: {fileID: 8300000, guid: 3c84b3fb88057ab49aa9a1f0fbce2ab7, type: 3}
@@ -20568,10 +20570,91 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243361543627370692, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &1278087076
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278087072}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -21591,7 +21674,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: Sountrack3
+        m_MethodName: Soundtrack3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22819,7 +22902,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -27644,7 +27727,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1278087075}
+      - m_Target: {fileID: 1278087076}
         m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
@@ -29011,7 +29094,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: ShopSountrack3
+        m_MethodName: ShopSoundtrack3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33207,7 +33290,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1278087073}
-        m_MethodName: ShopSountrack2
+        m_MethodName: ShopSoundtrack2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

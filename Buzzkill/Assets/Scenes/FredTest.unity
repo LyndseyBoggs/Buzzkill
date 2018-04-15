@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 166961752}
   m_Layer: 0
   m_Name: MenuManager
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,6 +498,7 @@ MonoBehaviour:
   musicCurrentVolume: 0
   effectsCurrentVolume: 0
   audio: {fileID: 0}
+  shopAudio: {fileID: 0}
   soundtrack1: {fileID: 0}
   soundtrack2: {fileID: 0}
   soundtrack3: {fileID: 0}
@@ -1807,6 +1808,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 53.518307, y: 28.02895}
   m_EdgeRadius: 0
+--- !u!114 &1086823625 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114600499573476652, guid: bad889829e90237428898dfac4d17e1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1086823620}
+  m_Script: {fileID: 11500000, guid: ecf3ebc21f254574c83248d797b91686, type: 3}
 --- !u!1 &1134911242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,7 +2833,7 @@ MonoBehaviour:
   totalCoins: 0
   coinText: {fileID: 1760613185}
   menuManager: {fileID: 166961752}
-  doge: {fileID: 0}
+  doge: {fileID: 1086823625}
   coins: 0
   coinsText: {fileID: 0}
   distance: 0

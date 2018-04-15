@@ -13,9 +13,15 @@ public class ThrownObject : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (!GameManager.instance.isGameOver) {
+	void Update ()
+	{
+		/*if (!GameManager.instance.isGameOver) {
 			tf.position += tf.right * Time.deltaTime * speed * GameManager.instance.worldSpeed;
+		}*/
+
+		if(GameObject.FindWithTag("Projectile").transform.position.x >= -30.4f)
+		{
+			Destroy(GameObject.FindWithTag("Projectile"));
 		}
 	}
 

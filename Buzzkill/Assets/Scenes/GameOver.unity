@@ -1389,8 +1389,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c65470358870924382475cf5344b756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterControl: {fileID: 0}
   pauseMenu: {fileID: 0}
   pauseButton: {fileID: 0}
+  continueScreen: {fileID: 0}
+  StartScreenCanvas: {fileID: 0}
+  StartStartCanvas: {fileID: 0}
+  musicVolume: {fileID: 0}
+  effectsVolume: {fileID: 0}
+  musicCurrentVolume: 0
+  effectsCurrentVolume: 0
+  audio: {fileID: 0}
+  shopAudio: {fileID: 0}
+  soundtrack1: {fileID: 0}
+  soundtrack2: {fileID: 0}
+  soundtrack3: {fileID: 0}
+  soundtrack4: {fileID: 0}
 --- !u!4 &2107213730
 Transform:
   m_ObjectHideFlags: 0
