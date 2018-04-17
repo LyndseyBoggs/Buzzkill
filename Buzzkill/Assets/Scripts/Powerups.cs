@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Powerups : MonoBehaviour {
 
-	public enum PowerupList {shield, powerup1, powerup2, doublePoints}
+	public enum PowerupList {shield, extraLife, powerup2, doublePoints}
 	public PowerupList powerup;
 	Transform tf;
 	public float speed;
@@ -33,13 +33,16 @@ public class Powerups : MonoBehaviour {
 				player.shieldSprite.SetActive (true);
 				Destroy (gameObject);
 				break;
+			
 			case PowerupList.doublePoints:
-				if(player)
-				{
-					Battack.Dtimer = 10f;
-					Battack.hasCoin = true;
-					Destroy(gameObject);
-				}
+				Battack.Dtimer = 10f;
+				Battack.hasCoin = true;
+				Destroy(gameObject);
+				break;
+
+			case PowerupList.extraLife:
+				GameManager.instance.pLives += 1;
+				Destroy (gameObject);
 				break;
 			}
 		}

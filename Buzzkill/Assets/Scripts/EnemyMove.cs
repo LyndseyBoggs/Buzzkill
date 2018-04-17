@@ -72,7 +72,7 @@ public class EnemyMove : MonoBehaviour {
 		GameObject bulletInstance = Instantiate(objToThrow, tf.position, Quaternion.Euler(new Vector3(0, 0, 0))) as GameObject;
 		Rigidbody2D rigid;
 		rigid = bulletInstance.GetComponent<Rigidbody2D>();
-		rigid.velocity = new Vector2(xVelocity, 5f);
+		rigid.velocity = new Vector2(xVelocity, yVelocity);
 		//Instantiate (objToThrow, transform.position, transform.rotation);
 		thrown = true;
 	}
