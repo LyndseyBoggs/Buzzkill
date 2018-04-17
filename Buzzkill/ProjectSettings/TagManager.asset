@@ -14,6 +14,7 @@ TagManager:
   - MainAudio
   - Projectile
   - Menu
+  - PeopleStung
   layers:
   - Default
   - TransparentFX

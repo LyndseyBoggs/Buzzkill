@@ -23,6 +23,15 @@ public class GameManager : MonoBehaviour {
 	public Text coinText;
 	public MenuManager menuManager;
 	public ChasingEnemy doge;
+	public int peopleStung;
+	public Text peopleStungText;
+	public int questTime;
+	public Text timerText;
+	int timeLeft;
+	public GameObject gameScene;
+	public GameObject victoryScene;
+	public bool quest1Complete;
+	public bool quest2Complete;
 
 	//public float finalScore;
 	public float coins;
@@ -33,6 +42,7 @@ public class GameManager : MonoBehaviour {
 	public Text gTimer;
 	public float tempWorldSpeed = .1f;
 	public int pLives;
+	private bool timerStarted;
 
 	// Use this for initialization
 	void Start () {
@@ -72,6 +82,21 @@ public class GameManager : MonoBehaviour {
 			if (scoreText) {
 				scoreText.text = "Score: " + score;
 			}
+			if (peopleStungText) {
+				peopleStungText.text = "People Stung: " + BeeAttack_Melee.killedEnemies;
+				if (BeeAttack_Melee.killedEnemies == 25) {
+					gameScene.SetActive (false);
+					victoryScene.SetActive (true);
+					quest1Complete = true;
+				}
+			}
+			if (timerText) {
+				if (!timerStarted) {
+					StartCoroutine (Timer ());
+					timerStarted = true;
+				}
+				timerText.text = "Time Left: " + timeLeft;
+			}
 		} else {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				menuManager.StartGame ();
@@ -87,7 +112,9 @@ public class GameManager : MonoBehaviour {
 //			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 //		}
 
-
+		if (!timerText) {
+			timerText = GameObject.FindGameObjectWithTag ("TimerText").GetComponent<Text> ();
+		}
 
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
@@ -108,6 +135,9 @@ public class GameManager : MonoBehaviour {
 		}
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
+		}
+		if (!peopleStungText) {
+			peopleStungText = GameObject.FindGameObjectWithTag ("PeopleStung").GetComponent<Text> ();
 		}
 	
 
@@ -219,5 +249,13 @@ public class GameManager : MonoBehaviour {
 
 	public void Pause(){
 		isPaused = !isPaused;
+	}
+
+	public IEnumerator Timer(){
+		timeLeft = questTime;
+		while (timeLeft > 0) {
+			timeLeft--;
+			yield return new WaitForSeconds (1f);
+		}
 	}
 }
