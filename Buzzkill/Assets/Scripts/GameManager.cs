@@ -83,15 +83,9 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
-<<<<<<< HEAD
 //		if (!coinText) {
 //			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 //		}
-=======
-		if (!coinText) {
-			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
-		}
->>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
@@ -101,17 +95,13 @@ public class GameManager : MonoBehaviour {
 		//	menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
 		//}
 
-		/*if(!coinsText)
+		if(!coinsText)
 		{
 			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
-<<<<<<< HEAD
 		}
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
 		}
-=======
-		}*/
->>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -148,13 +138,9 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
-<<<<<<< HEAD
-		if (pLives > 0) {
-=======
 		if(pLives > 0)
 		{
 			doge = GameObject.FindObjectOfType<ChasingEnemy>();
->>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 			pLives -= 1;
 			SceneManager.LoadScene ("FredTest");
 			isGameOver = false;
@@ -188,7 +174,7 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueNo()
 	{
-		GameOver();
+			GameOver();
 	}
 
 	public void GameOver(){
