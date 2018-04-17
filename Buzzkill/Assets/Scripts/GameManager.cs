@@ -83,20 +83,35 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
+<<<<<<< HEAD
 //		if (!coinText) {
 //			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 //		}
+=======
+		if (!coinText) {
+			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
+		}
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
 
-		if(!coinsText)
+		//if(Application.loadedLevelName == "FredTest")
+		//{
+		//	menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
+		//}
+
+		/*if(!coinsText)
 		{
 			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
+<<<<<<< HEAD
 		}
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
 		}
+=======
+		}*/
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -124,11 +139,6 @@ public class GameManager : MonoBehaviour {
 		gameTimer += Time.deltaTime;
 		//gTimer.text = "Timer: " + Mathf.Round(gameTimer);
 		//finalScore = gameTimer + distance + score + coins + BeeAttack_Melee.killedEnemies / 4 *.25;
-
-		if(Input.GetKeyDown(KeyCode.Z))
-		{
-			menuManager.ContinueScreen();
-		}
 	}
 
 	public void ContinueGame()
@@ -138,7 +148,13 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
+<<<<<<< HEAD
 		if (pLives > 0) {
+=======
+		if(pLives > 0)
+		{
+			doge = GameObject.FindObjectOfType<ChasingEnemy>();
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 			pLives -= 1;
 			SceneManager.LoadScene ("FredTest");
 			isGameOver = false;
