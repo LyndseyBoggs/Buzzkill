@@ -197,6 +197,14 @@ public class MenuManager : MonoBehaviour
 		continueScreen.SetActive(!continueScreen.activeSelf);
 	}
 
+	public void ContinueYes(){
+		GameManager.instance.ContinueYes ();
+	}
+
+	public void ContinueNo(){
+		GameManager.instance.ContinueNo ();
+	}
+
 	public void Exit(){
 		Application.Quit ();
 	}

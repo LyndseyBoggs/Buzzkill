@@ -14,7 +14,7 @@ public class LoginWithPlayfab : MonoBehaviour {
 	private string titleid = "B613";
 	private string password;
 	private string username;
-	private bool newlyCreated;
+//	private bool newlyCreated;
 //	System.Action<LoginResult> OnLoginResult;
 //	System.Action<PlayFabError> OnPlayFabError;
 //	System.Action<RegisterPlayFabUserResult> OnRegisterResult;

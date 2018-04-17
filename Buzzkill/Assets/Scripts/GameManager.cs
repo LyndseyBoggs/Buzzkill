@@ -83,9 +83,9 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
-		if (!coinText) {
-			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
-		}
+//		if (!coinText) {
+//			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
+//		}
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
@@ -93,6 +93,9 @@ public class GameManager : MonoBehaviour {
 		if(!coinsText)
 		{
 			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
+		}
+		if (!doge) {
+			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
 		}
 		/*if(!tDistnace)
 		{
@@ -114,7 +117,7 @@ public class GameManager : MonoBehaviour {
 		{
 			return;
 		}*/
-		coinText.text = "Banked Coins: " + totalCoins;
+		//coinText.text = "Banked Coins: " + totalCoins;
 		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
 		//tDistnace.text = "Travel distance: " + distance;
@@ -135,20 +138,31 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
-		if(pLives > 0)
-		{
+		if (pLives > 0) {
 			pLives -= 1;
+			SceneManager.LoadScene ("FredTest");
 			isGameOver = false;
-			worldSpeed = 1;
-			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-			foreach(GameObject enemy in enemies)
-				GameObject.Destroy(enemy);
-			GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
-			foreach(GameObject projectile in projectiles)
-				GameObject.Destroy(projectile);
+			//score = 0;
+			worldSpeed -= 3;
 			doge.currentState = ChasingEnemy.States.idle;
-			menuManager.ContinueScreen();
+			if (worldSpeed < 1) {
+				worldSpeed = 1;
+			}
+			GameManager.instance.isPaused = false;
 		}
+
+//			isGameOver = false;
+//			worldSpeed = 1;
+//			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+//			foreach(GameObject enemy in enemies)
+//				GameObject.Destroy(enemy);
+//			GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+//			foreach(GameObject projectile in projectiles)
+//				GameObject.Destroy(projectile);
+//			doge.currentState = ChasingEnemy.States.idle;
+//			menuManager.ContinueScreen();
+//			audio.Play();
+		
 
 		if(pLives == 0 && isGameOver == true)
 		{

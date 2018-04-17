@@ -178,6 +178,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &92426521
 GameObject:
@@ -746,7 +748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4868473176766092, guid: ba3159eac797c514e8910fb1bc9bc653, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 212264787019328292, guid: ba3159eac797c514e8910fb1bc9bc653,
         type: 2}
@@ -768,6 +770,7 @@ GameObject:
   - component: {fileID: 449254039}
   - component: {fileID: 449254038}
   - component: {fileID: 449254037}
+  - component: {fileID: 449254041}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -839,6 +842,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &449254041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449254036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c119458d29c8874dad7a095d865a907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &522418369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1120,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!114 &677883271 stripped
 MonoBehaviour:
@@ -1217,7 +1233,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1660252275}
+      - m_Target: {fileID: 166961752}
         m_MethodName: ContinueNo
         m_Mode: 1
         m_Arguments:
@@ -1586,6 +1602,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &992330357
 GameObject:
@@ -1966,7 +1984,7 @@ Transform:
   m_LocalScale: {x: 19.851923, y: 239.25629, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1289362254
 GameObject:
@@ -2116,7 +2134,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321354918
 GameObject:
@@ -2615,7 +2633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1660252275}
+      - m_Target: {fileID: 166961752}
         m_MethodName: ContinueYes
         m_Mode: 1
         m_Arguments:
