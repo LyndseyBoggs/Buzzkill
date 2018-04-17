@@ -23,6 +23,15 @@ public class GameManager : MonoBehaviour {
 	public Text coinText;
 	public MenuManager menuManager;
 	public ChasingEnemy doge;
+	public int peopleStung;
+	public Text peopleStungText;
+	public int questTime;
+	public Text timerText;
+	int timeLeft;
+	public GameObject gameScene;
+	public GameObject victoryScene;
+	public bool quest1Complete;
+	public bool quest2Complete;
 
 	//public float finalScore;
 	public float coins;
@@ -33,6 +42,7 @@ public class GameManager : MonoBehaviour {
 	public Text gTimer;
 	public float tempWorldSpeed = .1f;
 	public int pLives;
+	private bool timerStarted;
 
 	// Use this for initialization
 	void Start () {
@@ -72,28 +82,45 @@ public class GameManager : MonoBehaviour {
 			if (scoreText) {
 				scoreText.text = "Score: " + score;
 			}
+			if (peopleStungText) {
+				peopleStungText.text = "People Stung: " + BeeAttack_Melee.killedEnemies;
+				if (BeeAttack_Melee.killedEnemies == 25) {
+					gameScene.SetActive (false);
+					victoryScene.SetActive (true);
+					quest1Complete = true;
+				}
+			}
+			if (timerText) {
+				if (!timerStarted) {
+					StartCoroutine (Timer ());
+					timerStarted = true;
+				}
+				timerText.text = "Time Left: " + timeLeft;
+			}
 		} else {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				menuManager.StartGame ();
 			}
 		}
 		if (!scoreText) {
-			scoreText = GameObject.FindGameObjectWithTag ("ScoreText").GetComponent<Text>();
+			scoreText = GameObject.FindGameObjectWithTag ("ScoreText").GetComponent<Text> ();
 		}
 		if (!highScoreText) {
-			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
+			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text> ();
 		}
 //		if (!coinText) {
 //			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 //		}
-<<<<<<< HEAD
-=======
+
+		if (!timerText) {
+			timerText = GameObject.FindGameObjectWithTag ("TimerText").GetComponent<Text> ();
+		}
 
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
 		}
 
->>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
+
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
@@ -103,18 +130,18 @@ public class GameManager : MonoBehaviour {
 		//	menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
 		//}
 
-		if(!coinsText)
-		{
-			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
+		if (!coinsText) {
+			coinsText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
 		}
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
 		}
-<<<<<<< HEAD
-=======
-=======
-		}*/
->>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
+		if (!peopleStungText) {
+			peopleStungText = GameObject.FindGameObjectWithTag ("PeopleStung").GetComponent<Text> ();
+		}
+	
+
+
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -151,7 +178,7 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
-<<<<<<< HEAD
+
 		if(pLives > 0)
 		{
 			doge = GameObject.FindObjectOfType<ChasingEnemy>();
@@ -163,7 +190,7 @@ public class GameManager : MonoBehaviour {
 			doge.currentState = ChasingEnemy.States.idle;
 			if (worldSpeed < 1) {
 				worldSpeed = 1;
-=======
+
 
 		if (pLives > 0) {
 
@@ -179,7 +206,7 @@ public class GameManager : MonoBehaviour {
 					worldSpeed = 1;
 				}
 				GameManager.instance.isPaused = false;
->>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
+
 			}
 
 //			isGameOver = false;
@@ -200,7 +227,8 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-	
+		}
+	}
 
 	public void ContinueNo()
 	{
@@ -221,5 +249,13 @@ public class GameManager : MonoBehaviour {
 
 	public void Pause(){
 		isPaused = !isPaused;
+	}
+
+	public IEnumerator Timer(){
+		timeLeft = questTime;
+		while (timeLeft > 0) {
+			timeLeft--;
+			yield return new WaitForSeconds (1f);
+		}
 	}
 }

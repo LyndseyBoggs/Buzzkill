@@ -20,4 +20,8 @@ public class SceneTransition : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		cut.MoveToScene (goToScene);
 	}
+
+	public void NextScene(){
+		cut.MoveToScene (goToScene);
+	}
 }
