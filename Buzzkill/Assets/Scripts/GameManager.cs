@@ -86,6 +86,14 @@ public class GameManager : MonoBehaviour {
 //		if (!coinText) {
 //			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
 //		}
+<<<<<<< HEAD
+=======
+
+		if (!coinText) {
+			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
+		}
+
+>>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
@@ -102,6 +110,11 @@ public class GameManager : MonoBehaviour {
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
 		}
+<<<<<<< HEAD
+=======
+=======
+		}*/
+>>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -138,6 +151,7 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
+<<<<<<< HEAD
 		if(pLives > 0)
 		{
 			doge = GameObject.FindObjectOfType<ChasingEnemy>();
@@ -149,9 +163,24 @@ public class GameManager : MonoBehaviour {
 			doge.currentState = ChasingEnemy.States.idle;
 			if (worldSpeed < 1) {
 				worldSpeed = 1;
+=======
+
+		if (pLives > 0) {
+
+			if (pLives > 0) {
+				doge = GameObject.FindObjectOfType<ChasingEnemy> ();
+				pLives -= 1;
+				SceneManager.LoadScene ("FredTest");
+				isGameOver = false;
+				//score = 0;
+				worldSpeed -= 3;
+				doge.currentState = ChasingEnemy.States.idle;
+				if (worldSpeed < 1) {
+					worldSpeed = 1;
+				}
+				GameManager.instance.isPaused = false;
+>>>>>>> 61f0d4b80bdb9580908e7cbbb4f8234af62cc3a3
 			}
-			GameManager.instance.isPaused = false;
-		}
 
 //			isGameOver = false;
 //			worldSpeed = 1;
@@ -166,11 +195,12 @@ public class GameManager : MonoBehaviour {
 //			audio.Play();
 		
 
-		if(pLives == 0 && isGameOver == true)
-		{
-			GameOver();
+			if (pLives == 0 && isGameOver == true) {
+				GameOver ();
+			}
 		}
 	}
+	
 
 	public void ContinueNo()
 	{
