@@ -83,9 +83,15 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text>();
 		}
+<<<<<<< HEAD
+//		if (!coinText) {
+//			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
+//		}
+=======
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
 		}
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		if (!menuManager) {
 			menuManager = GameObject.FindObjectOfType<MenuManager> ();
 		}
@@ -98,7 +104,14 @@ public class GameManager : MonoBehaviour {
 		/*if(!coinsText)
 		{
 			coinsText = GameObject.FindGameObjectWithTag("CurrentCoinText").GetComponent<Text>();
+<<<<<<< HEAD
+		}
+		if (!doge) {
+			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
+		}
+=======
 		}*/
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -119,7 +132,7 @@ public class GameManager : MonoBehaviour {
 		{
 			return;
 		}*/
-		coinText.text = "Banked Coins: " + totalCoins;
+		//coinText.text = "Banked Coins: " + totalCoins;
 		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
 		//tDistnace.text = "Travel distance: " + distance;
@@ -135,21 +148,37 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueYes()
 	{
+<<<<<<< HEAD
+		if (pLives > 0) {
+=======
 		if(pLives > 0)
 		{
 			doge = GameObject.FindObjectOfType<ChasingEnemy>();
+>>>>>>> 15df007f0f03329656c15b52623f45be029b5e56
 			pLives -= 1;
+			SceneManager.LoadScene ("FredTest");
 			isGameOver = false;
-			worldSpeed = 1;
-			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-			foreach(GameObject enemy in enemies)
-				GameObject.Destroy(enemy);
-			GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
-			foreach(GameObject projectile in projectiles)
-				GameObject.Destroy(projectile);
+			//score = 0;
+			worldSpeed -= 3;
 			doge.currentState = ChasingEnemy.States.idle;
-			menuManager.ContinueScreen();
+			if (worldSpeed < 1) {
+				worldSpeed = 1;
+			}
+			GameManager.instance.isPaused = false;
 		}
+
+//			isGameOver = false;
+//			worldSpeed = 1;
+//			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+//			foreach(GameObject enemy in enemies)
+//				GameObject.Destroy(enemy);
+//			GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+//			foreach(GameObject projectile in projectiles)
+//				GameObject.Destroy(projectile);
+//			doge.currentState = ChasingEnemy.States.idle;
+//			menuManager.ContinueScreen();
+//			audio.Play();
+		
 
 		if(pLives == 0 && isGameOver == true)
 		{
