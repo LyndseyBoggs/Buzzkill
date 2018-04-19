@@ -195,15 +195,34 @@ public class MenuManager : MonoBehaviour
 		continueScreen.SetActive(!continueScreen.activeSelf);
 	}
 
-	public void ContinueYes(){
+	/*public void ContinueYes(){
 		GameManager.instance.ContinueYes ();
 	}
 
 	public void ContinueNo(){
 		GameManager.instance.ContinueNo ();
-	}
+	}*/
 
 	public void Exit(){
 		Application.Quit ();
 	}
+
+	public void Quest1()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest1");
+	}
+
+	public void Quest2()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest2");
+	}
+
+	public void Quest3()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest3");
+	}
+
 }
