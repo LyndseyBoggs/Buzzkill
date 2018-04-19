@@ -206,4 +206,23 @@ public class MenuManager : MonoBehaviour
 	public void Exit(){
 		Application.Quit ();
 	}
+
+	public void Quest1()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest1");
+	}
+
+	public void Quest2()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest2");
+	}
+
+	public void Quest3()
+	{
+		Destroy(GameObject.Find("MenuManager"));
+		SceneManager.LoadScene ("Quest3");
+	}
+
 }
