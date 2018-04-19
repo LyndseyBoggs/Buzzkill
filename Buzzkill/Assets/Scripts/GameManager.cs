@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
 		highScore = PlayerPrefs.GetInt ("HighScore");
 		totalCoins = PlayerPrefs.GetInt ("CoinsOwned");
 		highScoreText.text = " High Score: " + highScore;
@@ -59,6 +60,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!menuManager)
+		{
+			menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
+		}
 		if ((score - scoreOfLastSpeedUp) > scoreToSpeedUp) {
 			worldSpeed += speedIncrement;
 			scoreOfLastSpeedUp = score;
@@ -108,30 +113,12 @@ public class GameManager : MonoBehaviour {
 		if (!highScoreText) {
 			highScoreText = GameObject.FindGameObjectWithTag ("HighScoreText").GetComponent<Text> ();
 		}
-//		if (!coinText) {
-//			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
-//		}
+		if (!coinText) {
+			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
+		}
 
 		if (!timerText) {
 			timerText = GameObject.FindGameObjectWithTag ("TimerText").GetComponent<Text> ();
-		}
-
-		if (!coinText) {
-			coinText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
-		}
-
-
-		if (!menuManager) {
-			menuManager = GameObject.FindObjectOfType<MenuManager> ();
-		}
-
-		//if(Application.loadedLevelName == "FredTest")
-		//{
-		//	menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
-		//}
-
-		if (!coinsText) {
-			coinsText = GameObject.FindGameObjectWithTag ("CurrentCoinText").GetComponent<Text> ();
 		}
 		if (!doge) {
 			doge = GameObject.FindObjectOfType<ChasingEnemy> ();
@@ -139,9 +126,6 @@ public class GameManager : MonoBehaviour {
 		if (!peopleStungText) {
 			peopleStungText = GameObject.FindGameObjectWithTag ("PeopleStung").GetComponent<Text> ();
 		}
-	
-
-
 		/*if(!tDistnace)
 		{
 			tDistnace = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<Text>();
@@ -150,19 +134,6 @@ public class GameManager : MonoBehaviour {
 		{
 			gTimer = GameObject.FindGameObjectWithTag("TimerText").GetComponent<Text>();
 		}*/
-		/*if(continueGame)
-		{
-			Time.timeScale = 0;
-		}
-		else
-		{
-			Time.timeScale = 1;
-		}
-		if(continueGame)
-		{
-			return;
-		}*/
-		//coinText.text = "Banked Coins: " + totalCoins;
 		coinsText.text = "Coins: " + coins;
 		distance = score * worldSpeed;
 		//tDistnace.text = "Travel distance: " + distance;
@@ -176,22 +147,8 @@ public class GameManager : MonoBehaviour {
 		menuManager.ContinueScreen();
 	}
 
-	public void ContinueYes()
+	/*public void ContinueYes()
 	{
-
-		if(pLives > 0)
-		{
-			doge = GameObject.FindObjectOfType<ChasingEnemy>();
-			pLives -= 1;
-			SceneManager.LoadScene ("FredTest");
-			isGameOver = false;
-			//score = 0;
-			worldSpeed -= 3;
-			doge.currentState = ChasingEnemy.States.idle;
-			if (worldSpeed < 1) {
-				worldSpeed = 1;
-
-
 		if (pLives > 0) {
 
 			if (pLives > 0) {
@@ -227,13 +184,11 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-		}
-	}
 
 	public void ContinueNo()
 	{
 			GameOver();
-	}
+	}*/
 
 	public void GameOver(){
 		isGameOver = true;
