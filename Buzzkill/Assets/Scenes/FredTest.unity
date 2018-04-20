@@ -178,6 +178,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &71433697
 GameObject:
@@ -783,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c65470358870924382475cf5344b756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterControl: {fileID: 0}
+  masterControl: {fileID: 24100000, guid: c238ec66861b5ff4c8b24bf1c10fabc8, type: 2}
   pauseMenu: {fileID: 92426521}
   pauseButton: {fileID: 827534272}
   continueScreen: {fileID: 1606038511}
@@ -1408,7 +1410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4868473176766092, guid: ba3159eac797c514e8910fb1bc9bc653, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 212264787019328292, guid: ba3159eac797c514e8910fb1bc9bc653,
         type: 2}
@@ -2165,6 +2167,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!114 &677883271 stripped
 MonoBehaviour:
@@ -2523,7 +2527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 112, y: 55.1}
+  m_AnchoredPosition: {x: 9.5, y: 9.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &827534274
@@ -2778,6 +2782,8 @@ MonoBehaviour:
   spawnChance: 3000
   objsToSpawn:
   - {fileID: 1433616007561778, guid: 34bf252e8a9cca348a2d57dd7ca279b4, type: 2}
+  - {fileID: 1972090410435492, guid: 2b8ceb9770cd1e9458109c96b555f05b, type: 2}
+  - {fileID: 1512796026388608, guid: 4117eaa7f5b476245ba373b0b8a7a814, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &977395218
 GameObject:
@@ -3205,7 +3211,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 2077485526}
   m_HandleRect: {fileID: 1766670659}
   m_Direction: 0
-  m_MinValue: -60
+  m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 1
   m_Value: 0
@@ -3214,7 +3220,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 166961752}
         m_MethodName: EffectsVolumeControl
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3958,7 +3964,7 @@ Transform:
   m_LocalScale: {x: 19.851923, y: 239.25629, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1255914971
 GameObject:
@@ -5531,7 +5537,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 104185225}
   m_HandleRect: {fileID: 623701380}
   m_Direction: 0
-  m_MinValue: -60
+  m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 1
   m_Value: 0
@@ -5540,7 +5546,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 166961752}
         m_MethodName: MusicVolumeControl
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5792,7 +5798,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1595898941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 166961752}
+        m_MethodName: ConsumeExtraLife
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1595898941
@@ -6123,6 +6140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660252276}
   - component: {fileID: 1660252275}
+  - component: {fileID: 1660252277}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6164,14 +6182,17 @@ MonoBehaviour:
   victoryScene: {fileID: 0}
   quest1Complete: 0
   quest2Complete: 0
+  quest: 0
+  cutScene: {fileID: 0}
+  cam: {fileID: 0}
   coins: 0
-  coinsText: {fileID: 0}
+  coinsText: {fileID: 1760613185}
   distance: 0
   tDistnace: {fileID: 0}
   gameTimer: 0
   gTimer: {fileID: 0}
   tempWorldSpeed: 0.1
-  pLives: 1
+  pLives: 0
 --- !u!4 &1660252276
 Transform:
   m_ObjectHideFlags: 0
@@ -6185,6 +6206,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1660252277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660252274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7130233fd6fa44aa4398d3efa2d854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660743046
 GameObject:
   m_ObjectHideFlags: 0

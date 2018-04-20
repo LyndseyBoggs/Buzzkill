@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class Powerups : MonoBehaviour {
 
@@ -42,9 +44,22 @@ public class Powerups : MonoBehaviour {
 
 			case PowerupList.extraLife:
 				GameManager.instance.pLives += 1;
+				PurchaseItemRequest request = new PurchaseItemRequest ();
+				request.ItemId = "ExtraLife";
+				request.Price = 0;
+				request.VirtualCurrency = "PU";
+				PlayFabClientAPI.PurchaseItem (request, GrabbedExtraLife, OnPlayFabError); 
 				Destroy (gameObject);
 				break;
 			}
 		}
+	}
+	private void GrabbedExtraLife(PurchaseItemResult result){
+		Debug.Log ("Extra life added to inventory");
+		Debug.Log ("You have " + result.Items [0].RemainingUses + " extra lives remaining");
+	}
+
+	private void OnPlayFabError(PlayFabError error){
+		Debug.LogError(error.GenerateErrorReport ());
 	}
 }

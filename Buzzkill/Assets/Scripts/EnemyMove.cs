@@ -21,6 +21,7 @@ public class EnemyMove : MonoBehaviour {
 	public Sprite deadAnimation;
 	private AudioSource audSource;
 	bool dead;
+	public Sprite throwAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -75,6 +76,7 @@ public class EnemyMove : MonoBehaviour {
 		rigid.velocity = new Vector2(xVelocity, yVelocity);
 		//Instantiate (objToThrow, transform.position, transform.rotation);
 		thrown = true;
+		sRend.sprite = throwAnim;
 	}
 
 	void Die(){

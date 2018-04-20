@@ -14,18 +14,29 @@ public class ShopTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.L)) {
-			SubtractUserVirtualCurrencyRequest request = new SubtractUserVirtualCurrencyRequest ();
-			request.Amount = 10;
+			PurchaseItemRequest request = new PurchaseItemRequest ();
+			request.ItemId = "ExtraLife";
+			request.Price = 100;
 			request.VirtualCurrency = "GC";
-			PlayFab.PlayFabClientAPI.SubtractUserVirtualCurrency(request,OnSubtractSuccess,OnSubtractError);
-			UserAccountInfo info = new UserAccountInfo ();
+			PlayFab.PlayFabClientAPI.PurchaseItem(request,PurchaseSuccess,OnPlayFabError);
+
+
 		}
+
 	}
 
-	private void OnSubtractSuccess(ModifyUserVirtualCurrencyResult result){
-		Debug.Log ("Subtracted");
+	private void PurchaseSuccess(PurchaseItemResult result){
+		Debug.Log ("Congrats you bought " + result.Items [0].DisplayName);
 	}
-	private void OnSubtractError(PlayFabError error){
-		Debug.LogError (error.GenerateErrorReport());
+
+	private void OnPlayFabError(PlayFabError error){
+		Debug.LogError (error.GenerateErrorReport ());
 	}
+
+//	private void OnSubtractSuccess(ModifyUserVirtualCurrencyResult result){
+//		Debug.Log ("Subtracted");
+//	}
+//	private void OnSubtractError(PlayFabError error){
+//		Debug.LogError (error.GenerateErrorReport());
+//	}
 }

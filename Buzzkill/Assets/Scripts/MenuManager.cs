@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class MenuManager : MonoBehaviour
 {
@@ -51,10 +53,10 @@ public class MenuManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(audio.isPlaying)
-		{
-			Destroy(GameObject.FindGameObjectWithTag("MainAudio"));
-		}
+		//if(audio.isPlaying)
+		//{
+	//		Destroy(GameObject.FindGameObjectWithTag("MainAudio"));
+//		}
 	}
 
 	public void StartGame(){
@@ -229,4 +231,31 @@ public class MenuManager : MonoBehaviour
 		SceneManager.LoadScene ("Quest3");
 	}
 
+	public void ConsumeExtraLife(){
+		GetUserInventoryRequest inv = new GetUserInventoryRequest ();
+		PlayFabClientAPI.GetUserInventory(inv, InventoryResult, OnPlayFabError); 
+	}
+
+	private void InventoryResult(GetUserInventoryResult result){
+		ItemInstance itemToUse;
+		for (int i = 0; i < result.Inventory.Count; i++) {
+			if (result.Inventory [i].DisplayName == "Extra Life") {
+				itemToUse = result.Inventory [i];
+				ConsumeItemRequest request = new ConsumeItemRequest ();
+				request.ConsumeCount = 1;
+				request.ItemInstanceId = itemToUse.ItemInstanceId;
+				PlayFabClientAPI.ConsumeItem (request, LifeConsumed, OnPlayFabError);
+				break;
+			}
+		}
+
+	}
+
+	private void LifeConsumed(ConsumeItemResult result){
+		Debug.Log ("Extra life consumed. " + result.RemainingUses + " uses remaining.");
+	}
+
+	private void  OnPlayFabError(PlayFabError error){
+		Debug.LogError (error.GenerateErrorReport ());
+	}
 }

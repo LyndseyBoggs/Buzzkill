@@ -8,12 +8,27 @@ using UnityEngine.SceneManagement;
 
 public class LoginWithPlayfab : MonoBehaviour {
 
+	//Log in Boxes
+	[Header("Log in Text Fields")]
 	public InputField usernameBox;
 	public InputField passwordBox;
+
+	//Register Boxes
+	[Header("Register Text Fields")]
+	public InputField accountName;
+	public InputField displayName;
 	public InputField emailBox;
+	public InputField createPassword;
+	public InputField confirmPassword;
+
+
+
+	//Private Variables
 	private string titleid = "B613";
 	private string password;
 	private string username;
+	private string createdPassword;
+	private string confirmedPassword;
 //	private bool newlyCreated;
 //	System.Action<LoginResult> OnLoginResult;
 //	System.Action<PlayFabError> OnPlayFabError;
@@ -39,12 +54,19 @@ public class LoginWithPlayfab : MonoBehaviour {
 	}
 
 	public void CreateAccount(){
-		RegisterPlayFabUserRequest create = new RegisterPlayFabUserRequest ();
-		create.Username = usernameBox.text;
-		create.Email = emailBox.text;
-		create.Password = passwordBox.text;
-		create.TitleId = titleid;
-		PlayFabClientAPI.RegisterPlayFabUser (create, OnRegisterResult, OnPlayFabError);
+		createdPassword = createPassword.text;
+		confirmedPassword = confirmPassword.text;
+		if (createdPassword == confirmedPassword) {
+			RegisterPlayFabUserRequest create = new RegisterPlayFabUserRequest ();
+			create.Username = accountName.text;
+			create.Email = emailBox.text;
+			create.Password = createdPassword;
+			create.DisplayName = displayName.text;
+			create.TitleId = titleid;
+			PlayFabClientAPI.RegisterPlayFabUser (create, OnRegisterResult, OnPlayFabError);
+		} else {
+			Debug.LogError ("Passwords Must Match");
+		}
 	}
 	private void OnLoginResult(LoginResult result){
 		Debug.Log ("You succesfully logged in");
