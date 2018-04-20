@@ -1742,6 +1742,9 @@ MonoBehaviour:
   spawnChance: 2000
   objsToSpawn:
   - {fileID: 1115958097313080, guid: d2fb605294ab5684d948f301266f19cc, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &568679308
 GameObject:
@@ -2032,6 +2035,9 @@ MonoBehaviour:
   - {fileID: 1838842974610340, guid: 52dd2cda130962c4da98b8dcd2365512, type: 2}
   - {fileID: 1538061612684070, guid: 6d8edc8b15bcfd843aeb528c135259a3, type: 2}
   - {fileID: 1306350548754988, guid: 05a9d017e4ded9d40ba55514894ce894, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
   objToSpawn: {fileID: 0}
 --- !u!1 &635908676
 GameObject:
@@ -6665,6 +6671,10 @@ MonoBehaviour:
   - {fileID: 1837465627703704, guid: e2f497d51f8ca754eac82c0b785c87df, type: 2}
   - {fileID: 1166721510192774, guid: e2544b30bc2f23f488ec9c2400c3b25c, type: 2}
   - {fileID: 1908907306599992, guid: 52be69af5fad80f4bbdebc58a1b1b710, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
+  - {fileID: 1581752944875478, guid: a3674682d7fa80c45a377fb58070bd9a, type: 2}
   spawnedObj: {fileID: 0}
   spawnChance: 500
   timeToWait: 0
