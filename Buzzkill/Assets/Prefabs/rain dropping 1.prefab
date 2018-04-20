@@ -20,6 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4152454877979340}
   - component: {fileID: 212875375316547034}
+  - component: {fileID: 61513698142912798}
+  - component: {fileID: 114145378226559454}
+  - component: {fileID: 114640775494110126}
   m_Layer: 0
   m_Name: rain dropping 1
   m_TagString: Untagged
@@ -40,6 +43,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61513698142912798
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581752944875478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18, y: 18}
+    newSize: {x: 18, y: 18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 15}
+  m_EdgeRadius: 0
+--- !u!114 &114145378226559454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581752944875478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimAnimation: {fileID: 21300000, guid: f72767fdbe7265c4c90888426e509e2d, type: 3}
+  aggroRange: 50
+  speed: 20
+  throwRange: 0
+  objToThrow: {fileID: 0}
+  isDead: 0
+  coinMin: 1
+  coinMax: 5
+  coinValue: 0
+  deadAnimation: {fileID: 0}
+--- !u!114 &114640775494110126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581752944875478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 11
+  anims:
+  - {fileID: 21300000, guid: f72767fdbe7265c4c90888426e509e2d, type: 3}
+  - {fileID: 21300000, guid: a8b2bb1193822b046932832c1789ebc3, type: 3}
+  - {fileID: 21300000, guid: 9abed9e6661874445a95dddd37456964, type: 3}
+  - {fileID: 21300000, guid: 4906cacbeff226b4285cfcaacf5e4cc4, type: 3}
+  - {fileID: 21300000, guid: 70cebb58aa2f2b14da1b8ba245aecc38, type: 3}
+  - {fileID: 21300000, guid: 99436c90de12022429f1bdb282c1bdd6, type: 3}
+  - {fileID: 21300000, guid: ee57029cb09699c49aae9eca91c5bc09, type: 3}
+  - {fileID: 21300000, guid: c9d170d36dc8cc349842d8581a16186a, type: 3}
+  - {fileID: 21300000, guid: b5ed5bdd74452a54e9e5bb1e82b4a9a5, type: 3}
+  - {fileID: 21300000, guid: 0db18819ff69a2b4b9ec8c2a919b2da2, type: 3}
+  waitForClick: 0
+  stopAtEnd: 0
 --- !u!212 &212875375316547034
 SpriteRenderer:
   m_ObjectHideFlags: 1
