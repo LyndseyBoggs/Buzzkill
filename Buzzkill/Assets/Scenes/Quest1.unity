@@ -1154,7 +1154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &591199223
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &733335886
 Transform:
   m_ObjectHideFlags: 0
@@ -2952,6 +2952,9 @@ MonoBehaviour:
   gameScene: {fileID: 733335885}
   victoryScene: {fileID: 591199222}
   quest1Complete: 0
+  quest2Complete: 0
+  quest: 0
+  cutScene: {fileID: 0}
   coins: 0
   coinsText: {fileID: 0}
   distance: 0

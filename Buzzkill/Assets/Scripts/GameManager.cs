@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject victoryScene;
 	public bool quest1Complete;
 	public bool quest2Complete;
+	public bool quest;
+	public GameObject cutScene;
+	public Camera cam;
 
 	//public float finalScore;
 	public float coins;
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour {
 					gameScene.SetActive (false);
 					victoryScene.SetActive (true);
 					quest1Complete = true;
+
 				}
 			}
 			if (timerText) {
@@ -144,7 +148,13 @@ public class GameManager : MonoBehaviour {
 
 	public void ContinueGame()
 	{
-		menuManager.ContinueScreen();
+		if (!quest) {
+			menuManager.ContinueScreen ();
+		} else {
+			gameScene.SetActive (false);
+			cutScene.SetActive (true);
+
+		}
 	}
 
 	/*public void ContinueYes()

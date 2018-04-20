@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Flip.cs" />
+     <Compile Include="Assets\LAZY.cs" />
      <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminAPI.cs" />
      <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminModels.cs" />
      <Compile Include="Assets\PlayFabSdk\Admin\PlayFabEvents.cs" />
@@ -152,6 +154,7 @@
      <Compile Include="Assets\PlayFabSdk\Shared\SignalR.NET20\Transports\ServerSentEventsTransport.cs" />
      <Compile Include="Assets\PlayFabSdk\Shared\SignalR.NET20\Transports\SseEvent.cs" />
      <Compile Include="Assets\PlayFabSdk\ShopTest.cs" />
+     <Compile Include="Assets\Poof.cs" />
      <Compile Include="Assets\Scripts\AddPoints_Keffny.cs" />
      <Compile Include="Assets\Scripts\AIDoge_Keffny.cs" />
      <Compile Include="Assets\Scripts\AnimChanger.cs" />

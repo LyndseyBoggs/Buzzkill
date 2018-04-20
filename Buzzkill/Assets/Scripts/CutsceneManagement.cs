@@ -11,6 +11,10 @@ public class CutsceneManagement : MonoBehaviour {
 	public GameObject Scene4;
 	public GameObject Scene5;
 	public GameObject Scene6;
+	public GameObject Scene7;
+	public GameObject Scene8;
+	public GameObject Scene9;
+	public GameObject Scene10;
 
 	//public int currentScene;
 
@@ -19,7 +23,7 @@ public class CutsceneManagement : MonoBehaviour {
 		if (GameManager.instance.quest1Complete) {
 			MoveToScene (6);
 			if (GameManager.instance.quest2Complete) {
-				MoveToScene (9);
+				MoveToScene (10);
 			}
 		}
 	}
@@ -39,6 +43,10 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene3.gameObject.SetActive (false);
 			Scene5.gameObject.SetActive (false);
 			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 2:
@@ -49,6 +57,10 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene3.gameObject.SetActive (false);
 			Scene5.gameObject.SetActive (false);
 			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 3:
@@ -56,9 +68,12 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene1.gameObject.SetActive (false);
 			Scene2.gameObject.SetActive (false);
 			Scene4.gameObject.SetActive (false);
-			Scene3.gameObject.SetActive (false);
 			Scene5.gameObject.SetActive (false);
 			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 4:
@@ -68,6 +83,10 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene3.gameObject.SetActive (false);
 			Scene5.gameObject.SetActive (false);
 			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 5:
@@ -81,6 +100,10 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene3.gameObject.SetActive (false);
 			Scene4.gameObject.SetActive (false);
 			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 7:
@@ -90,11 +113,76 @@ public class CutsceneManagement : MonoBehaviour {
 			Scene3.gameObject.SetActive (false);
 			Scene4.gameObject.SetActive (false);
 			Scene5.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
 			break;
 
 		case 8:
 			SceneManager.LoadScene ("Quest2");
 			break;
+
+		case 9: 
+			Scene7.gameObject.SetActive (true);
+			Scene1.gameObject.SetActive (false);
+			Scene2.gameObject.SetActive (false);
+			Scene3.gameObject.SetActive (false);
+			Scene4.gameObject.SetActive (false);
+			Scene5.gameObject.SetActive (false);
+			Scene6.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
+			break;
+
+		case 10:
+			Scene8.gameObject.SetActive (true);
+			Scene1.gameObject.SetActive (false);
+			Scene2.gameObject.SetActive (false);
+			Scene3.gameObject.SetActive (false);
+			Scene4.gameObject.SetActive (false);
+			Scene5.gameObject.SetActive (false);
+			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
+			break;
+
+		case 11:
+			Scene9.gameObject.SetActive (true);
+			Scene1.gameObject.SetActive (false);
+			Scene2.gameObject.SetActive (false);
+			Scene3.gameObject.SetActive (false);
+			Scene4.gameObject.SetActive (false);
+			Scene5.gameObject.SetActive (false);
+			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene10.gameObject.SetActive (false);
+			break;
+
+		case 12:
+			Scene10.gameObject.SetActive (true);
+			Scene1.gameObject.SetActive (false);
+			Scene2.gameObject.SetActive (false);
+			Scene3.gameObject.SetActive (false);
+			Scene4.gameObject.SetActive (false);
+			Scene5.gameObject.SetActive (false);
+			Scene6.gameObject.SetActive (false);
+			Scene7.gameObject.SetActive (false);
+			Scene8.gameObject.SetActive (false);
+			Scene9.gameObject.SetActive (false);
+			break;
+
+		case 13:
+			SceneManager.LoadScene ("Quest3");
+			break;
+
+		case 14:
+			SceneManager.LoadScene ("StartScreen");
+			break;
 		}
+			
 	}
 }

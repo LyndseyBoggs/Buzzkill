@@ -203,6 +203,10 @@ public class MenuManager : MonoBehaviour
 		GameManager.instance.ContinueNo ();
 	}*/
 
+	public void LoadCutScene(){
+		SceneManager.LoadScene ("CutScene");
+	}
+
 	public void Exit(){
 		Application.Quit ();
 	}

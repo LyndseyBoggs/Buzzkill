@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Quest2.unity
     guid: 671e8a95c41a5bb42bc8e5441a2a283c
   - enabled: 1
+    path: Assets/Scenes/Quest3.unity
+    guid: f84bfdbce21e53445a4a9dc0acd8bd59
+  - enabled: 1
     path: Assets/Scenes/CutScene.unity
     guid: 318f0d7cb561cc1418e1f2a06ddf6c2c
   - enabled: 0
