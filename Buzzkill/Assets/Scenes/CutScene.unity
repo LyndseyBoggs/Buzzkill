@@ -285,7 +285,7 @@ SpriteRenderer:
   m_Size: {x: 36, y: 36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &32276532
 Transform:
@@ -313,12 +313,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   framesToSwap: 4
   anims:
-  - {fileID: 21300000, guid: b65222773a5acb147a0f8c502b779bee, type: 3}
-  - {fileID: 21300000, guid: 211ba63dc991c7f4da82daa5d1ef055f, type: 3}
-  - {fileID: 21300000, guid: dc7d7f8e3334fd2478b74029a8bd81d7, type: 3}
-  - {fileID: 21300000, guid: e037480daf4da3f439d92d423655b09e, type: 3}
-  - {fileID: 21300000, guid: 972c6ce693dc5604392b90cec5f32a3c, type: 3}
-  - {fileID: 21300000, guid: c4c233807c9b9ba4694afabcb2d243e6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   waitForClick: 0
   stopAtEnd: 0
 --- !u!1 &55058808
@@ -4694,7 +4694,7 @@ SpriteRenderer:
   m_Size: {x: 36, y: 36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1581204028
 GameObject:
@@ -5465,12 +5465,13 @@ GameObject:
   - component: {fileID: 1739557878}
   - component: {fileID: 1739557877}
   - component: {fileID: 1739557879}
+  - component: {fileID: 1739557880}
   m_Layer: 0
   m_Name: stripes-flying 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &1739557877
 SpriteRenderer:
@@ -5506,7 +5507,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b65222773a5acb147a0f8c502b779bee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d22694bec95df06489827584fd2455f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -5551,6 +5552,27 @@ MonoBehaviour:
   moveSpeed: 0.2
   proximity: 0
   waitTime: 0
+--- !u!114 &1739557880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739557876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 4
+  anims:
+  - {fileID: 21300000, guid: d22694bec95df06489827584fd2455f8, type: 3}
+  - {fileID: 21300000, guid: ea56d6e20f7b8294ba8a604042c59891, type: 3}
+  - {fileID: 21300000, guid: 4ad2ae5a70d1af34285e1ed1da8aae83, type: 3}
+  - {fileID: 21300000, guid: c39d6349dece0b3418be06fd16b9ac95, type: 3}
+  - {fileID: 21300000, guid: cb6c80192bff7d346bba9ae7a2afe115, type: 3}
+  - {fileID: 21300000, guid: 37c816fdd78d2c64c9a0bbf4d96d16d3, type: 3}
+  waitForClick: 0
+  stopAtEnd: 0
 --- !u!1 &1741566768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6075,7 +6097,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b65222773a5acb147a0f8c502b779bee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d22694bec95df06489827584fd2455f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -6111,12 +6133,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   framesToSwap: 4
   anims:
-  - {fileID: 21300000, guid: b65222773a5acb147a0f8c502b779bee, type: 3}
-  - {fileID: 21300000, guid: 211ba63dc991c7f4da82daa5d1ef055f, type: 3}
-  - {fileID: 21300000, guid: dc7d7f8e3334fd2478b74029a8bd81d7, type: 3}
-  - {fileID: 21300000, guid: e037480daf4da3f439d92d423655b09e, type: 3}
-  - {fileID: 21300000, guid: 972c6ce693dc5604392b90cec5f32a3c, type: 3}
-  - {fileID: 21300000, guid: c4c233807c9b9ba4694afabcb2d243e6, type: 3}
+  - {fileID: 21300000, guid: d22694bec95df06489827584fd2455f8, type: 3}
+  - {fileID: 21300000, guid: ea56d6e20f7b8294ba8a604042c59891, type: 3}
+  - {fileID: 21300000, guid: 4ad2ae5a70d1af34285e1ed1da8aae83, type: 3}
+  - {fileID: 21300000, guid: c39d6349dece0b3418be06fd16b9ac95, type: 3}
+  - {fileID: 21300000, guid: cb6c80192bff7d346bba9ae7a2afe115, type: 3}
+  - {fileID: 21300000, guid: 37c816fdd78d2c64c9a0bbf4d96d16d3, type: 3}
   waitForClick: 0
   stopAtEnd: 0
 --- !u!114 &1968423462

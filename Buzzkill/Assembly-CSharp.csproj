@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CutScene.cs" />
      <Compile Include="Assets\Flip.cs" />
+     <Compile Include="Assets\GameScene.cs" />
      <Compile Include="Assets\LAZY.cs" />
      <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminAPI.cs" />
      <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminModels.cs" />
@@ -199,6 +201,7 @@
      <Compile Include="Assets\Scripts\Timer_Keffny.cs" />
      <Compile Include="Assets\Scripts\TrajectoryTest_Keffny.cs" />
      <Compile Include="Assets\Scripts\WaypointMove.cs" />
+     <Compile Include="Assets\SuperLazy.cs" />
      <None Include="Assets\PlayFabSdk\link.xml" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/frehunt/Documents/Buzzkill/Buzzkill/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

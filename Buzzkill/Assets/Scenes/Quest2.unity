@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 182139170}
   - component: {fileID: 182139169}
   - component: {fileID: 182139172}
+  - component: {fileID: 182139173}
   m_Layer: 0
   m_Name: raining f1
   m_TagString: Untagged
@@ -386,6 +387,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: CutScene
+--- !u!114 &182139173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182139168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1681745c0c47243b64d0e7dc99418b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &201314751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,7 +4975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1338845419
 Transform:
   m_ObjectHideFlags: 0

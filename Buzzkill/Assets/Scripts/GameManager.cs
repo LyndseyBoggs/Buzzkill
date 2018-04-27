@@ -56,18 +56,19 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		bee = GameObject.FindObjectOfType<BeeMovement> ();
 		beeAtk = GameObject.FindObjectOfType<BeeAttack_Melee> ();
-		//menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
-		PlayFabStart();
-		playFabStats = GetComponent<PlayFabStats>();
-		//highScore = PlayerPrefs.GetInt ("HighScore");
-		//totalCoins = PlayerPrefs.GetInt ("CoinsOwned");
-		//highScoreText.text = " High Score: " + highScore;
 		if (!instance) {
 			instance = this;
 		} else {
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (instance);
+		//menuManager = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>();
+		PlayFabStart();
+		playFabStats = GetComponent<PlayFabStats>();
+		//highScore = PlayerPrefs.GetInt ("HighScore");
+		//totalCoins = PlayerPrefs.GetInt ("CoinsOwned");
+		//highScoreText.text = " High Score: " + highScore;
+
 	}
 	
 	// Update is called once per frame
@@ -215,11 +216,11 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-
+*/
 	public void ContinueNo()
 	{
 			GameOver();
-	}*/
+	}
 
 	public void GameOver(){
 		isGameOver = true;
