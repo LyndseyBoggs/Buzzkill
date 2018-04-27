@@ -102,7 +102,6 @@ public class GameManager : MonoBehaviour {
 		}
 		if (!coinText) {
 			coinText = GameObject.FindGameObjectWithTag ("CoinsText").GetComponent<Text> ();
-			Debug.Log ("Try");
 		}
 		if (!isGameOver) {
 			score++;

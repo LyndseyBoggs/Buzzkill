@@ -20,6 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4481513845582970}
   - component: {fileID: 212238102662951274}
+  - component: {fileID: 61800422170701398}
+  - component: {fileID: 114118608608700830}
+  - component: {fileID: 114153718354995252}
+  - component: {fileID: 82425317809004636}
   m_Layer: 0
   m_Name: Old Lady
   m_TagString: Untagged
@@ -35,11 +39,160 @@ Transform:
   m_GameObject: {fileID: 1589470618734124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61800422170701398
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589470618734124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 21, y: 15}
+  m_EdgeRadius: 0
+--- !u!82 &82425317809004636
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589470618734124}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243564405993641622, guid: c238ec66861b5ff4c8b24bf1c10fabc8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 87418026159b0aa4ebe1159f0e04d30b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114118608608700830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589470618734124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimAnimation: {fileID: 21300000, guid: cfcb9c9aeed914a408f078ed42048226, type: 3}
+  aggroRange: 100
+  speed: 0
+  throwRange: 50
+  objToThrow: {fileID: 1494304927818424, guid: 7a406a3838cdd6f40b4c43437ac34f55, type: 2}
+  isDead: 0
+  coinMin: 1
+  coinMax: 5
+  coinValue: 0
+  deadAnimation: {fileID: 0}
+  throwAnim: {fileID: 21300000, guid: f8ad9501df4e32a4dac79f4a8fc7cfe1, type: 3}
+--- !u!114 &114153718354995252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589470618734124}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesToSwap: 5
+  anims:
+  - {fileID: 21300000, guid: f9e732cf6ca8302499a36aa6d54d85b4, type: 3}
+  - {fileID: 21300000, guid: 04cdf92b776855c4ca1d9432770a93ff, type: 3}
+  - {fileID: 21300000, guid: 3d19782ff2774364c9328609ae9953ff, type: 3}
+  - {fileID: 21300000, guid: 5aaa1138f93f9954a966b0f97c6b6532, type: 3}
+  - {fileID: 21300000, guid: 70a46553fcb0ae24a947826d743491c0, type: 3}
+  - {fileID: 21300000, guid: 1971cacc2bac8dd429ba58f3859187f5, type: 3}
+  waitForClick: 0
+  stopAtEnd: 1
 --- !u!212 &212238102662951274
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7bbc776315372474db3dbcca4da3a25e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7965deef80844de48a0e2dbbeb4971b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

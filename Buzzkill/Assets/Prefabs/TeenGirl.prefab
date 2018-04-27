@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1124398486716082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +60,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4, y: 3.23}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 21, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -137,7 +137,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -163,12 +163,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   framesToSwap: 5
   anims:
-  - {fileID: 21300000, guid: ccce02fee5eda9f43a4a14923b4683a1, type: 3}
-  - {fileID: 21300000, guid: ebe1244490992cb47a6bd3001053f2fd, type: 3}
-  - {fileID: 21300000, guid: b6a1629ba086e814e82e062b52ce4060, type: 3}
-  - {fileID: 21300000, guid: 4ed3d46c808b6cc43a19d017bbafa89f, type: 3}
+  - {fileID: 21300000, guid: 6a1419ae9bd60c6418c39b4f6e2b496a, type: 3}
+  - {fileID: 21300000, guid: 5e70814aa5f227145a660749bb493bb1, type: 3}
+  - {fileID: 21300000, guid: 3e9d431a4116de74a89022464c44f889, type: 3}
+  - {fileID: 21300000, guid: 67a437d237889a04d877acd2eb361443, type: 3}
+  - {fileID: 21300000, guid: 2556aea2b7ef0854693d865bf4860c59, type: 3}
+  - {fileID: 21300000, guid: a13a6c243d69bb74baff8541a6493759, type: 3}
   waitForClick: 0
-  stopAtEnd: 0
+  stopAtEnd: 1
 --- !u!114 &114230548339361134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimAnimation: {fileID: 21300000, guid: 19db46e4a138015499ff4b389ebda51e, type: 3}
+  aimAnimation: {fileID: 21300000, guid: 924652c6184a54942b2e900d8d0dc14f, type: 3}
   aggroRange: 100
   speed: 10
   throwRange: 75
@@ -190,7 +192,7 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: 15c5cf355e3663f408ccc496c7a0fda8, type: 3}
-  throwAnim: {fileID: 21300000, guid: d480a146e993d324f8b2bd26e47fd485, type: 3}
+  throwAnim: {fileID: 21300000, guid: 175fc6395290d574d99759c1b916a1b8, type: 3}
 --- !u!212 &212322689698537570
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -225,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e73607d983f9a0845a33b4736926182a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d22406019fbf1a4e832329bc9383096, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

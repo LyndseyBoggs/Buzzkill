@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1675883387515292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.64000005, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +60,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15, y: 21}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 15, y: 21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -137,7 +137,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa1288035ae78546adf5e36cade107d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimAnimation: {fileID: 21300000, guid: 0318e2280c44785409e287822452ef4c, type: 3}
-  aggroRange: 0
+  aimAnimation: {fileID: 21300000, guid: 9a904e5df6d0eb547b228d39a9c3857e, type: 3}
+  aggroRange: 100
   speed: 10
   throwRange: 75
   objToThrow: {fileID: 1240672646739848, guid: b2ac62b248bd5264aaf13ea2b4230c0a, type: 2}
@@ -171,22 +171,28 @@ MonoBehaviour:
   coinMax: 5
   coinValue: 0
   deadAnimation: {fileID: 21300000, guid: bdccef5f333a56e4d935a044bbadcce8, type: 3}
-  throwAnim: {fileID: 21300000, guid: 09e2c79ee72ca67449eee8c61f23399c, type: 3}
+  throwAnim: {fileID: 21300000, guid: e02e1ad6c42f7894e8acc8f396871919, type: 3}
 --- !u!114 &114434120880143756
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675883387515292}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ef4741f0bfab4a42af020bfb56e0a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  framesToSwap: 0
-  anims: []
+  framesToSwap: 5
+  anims:
+  - {fileID: 21300000, guid: a80288eda7a3f6840860d706364da9bf, type: 3}
+  - {fileID: 21300000, guid: 52c82f7a6d356bd40a7b534b62c3c820, type: 3}
+  - {fileID: 21300000, guid: 0a467041fe2bf50429525c79ea7598fe, type: 3}
+  - {fileID: 21300000, guid: 9cf3b47c8dd81644b9d8bacc805f9c8c, type: 3}
+  - {fileID: 21300000, guid: 444d84ab51d343840aa3eacffeea483a, type: 3}
+  - {fileID: 21300000, guid: 5aeb3c3887ac7024c8985e8c23891d7e, type: 3}
   waitForClick: 0
-  stopAtEnd: 0
+  stopAtEnd: 1
 --- !u!212 &212920177297344340
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -221,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e14bfc202762a5b4a99c4dbc7f7e55a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a904e5df6d0eb547b228d39a9c3857e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

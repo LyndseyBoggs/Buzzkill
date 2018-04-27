@@ -22,6 +22,7 @@ public class EnemyMove : MonoBehaviour {
 	private AudioSource audSource;
 	bool dead;
 	public Sprite throwAnim;
+	private AnimChanger anChange;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,7 @@ public class EnemyMove : MonoBehaviour {
 		coinValue = Random.Range (coinMin, coinMax);
 		sRend = GetComponent<SpriteRenderer> ();
 		audSource = GetComponent<AudioSource> ();
+		anChange = GetComponent<AnimChanger> ();
 	}
 	
 	// Update is called once per frame
@@ -83,6 +85,7 @@ public class EnemyMove : MonoBehaviour {
 		speed = 10;
 		audSource.Play ();
 		dead = true;
+		anChange.enabled = true;
 		//sRend.sprite = deadAnimation;
 	}
 }
